@@ -1,5 +1,5 @@
 # Kabe-veebirakendus
-Veebirakendus kabe mängimiseks.  
+Veebirakendus kabe mängimiseks AI vastu.  
 
 ## Rakenduse jooksutamine
 Alguses:
