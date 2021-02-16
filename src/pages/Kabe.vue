@@ -1,40 +1,46 @@
 <template>
-    <div class="konteiner">
+  <div class="konteiner">
 
-        <div style="margin-bottom: 3em;">Algus</div>
+    <div>
 
+      <div>
         <OlenKomponent
-                v-for="(nr, index) in numbrid"
-                :key="index"
-                :number="nr"
-        />
+            v-for="n in numbrid"
+            :key="n"
+        ></OlenKomponent>
+      </div>
 
-        <div style="margin-top: 3em;">Lõpp</div>
 
     </div>
+
+  </div>
+
+
 </template>
 
 <script>
-    import OlenKomponent from "../components/OlenKomponent";
+import OlenKomponent from "../components/OlenKomponent";
 
-    export default {
-        name: "Kabe",
+export default {
+  name: "Kabe",
 
-        components: {OlenKomponent},
+  components: {OlenKomponent},
 
-        data(){
-            return {
-                numbrid: [1, 3, 5, 6]
-            }
-        }
+  data() {
+    return {
+      numbrid: [1, 2, 3, 4]
     }
+  },
+  methods: {}
+}
+
 </script>
 
 <style scoped>
-.konteiner{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.konteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>
