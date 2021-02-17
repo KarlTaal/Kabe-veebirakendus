@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="df6be39b-cd34-43d9-a333-a7bdc2c9d961" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/OlenKomponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OlenKomponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Kabe.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Kabe.vue" afterDir="false" />
     </list>
@@ -28,10 +27,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1613231306747" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../OOP/Enne2Praksi" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -64,7 +64,10 @@
       <workItem from="1613229536899" duration="1926000" />
       <workItem from="1613497928366" duration="126000" />
       <workItem from="1613498089541" duration="4082000" />
-      <workItem from="1613511741315" duration="2196000" />
+      <workItem from="1613511741315" duration="3424000" />
+      <workItem from="1613542427696" duration="3900000" />
+      <workItem from="1613546433651" duration="39000" />
+      <workItem from="1613547267184" duration="37000" />
     </task>
     <servers />
   </component>
@@ -76,6 +79,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1172" y="254" key="#ESLint/0.0.1920.1050@0.0.1920.1050" timestamp="1613498035505" />
+    <state x="1220" y="242" key="FileChooserDialogImpl" timestamp="1613547301398">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1220" y="242" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1613547301398" />
   </component>
   <component name="masterDetails">
     <states>

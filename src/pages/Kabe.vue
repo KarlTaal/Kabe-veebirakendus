@@ -5,11 +5,11 @@
 
       <div>
         <OlenKomponent
-            v-for="n in numbrid"
-            :key="n"
+           v-for="i in 6"
+           :key="i"
+           :player="i === 2 || i === 4 ? 'must' : 'valge'"
         ></OlenKomponent>
       </div>
-
 
     </div>
 
@@ -28,7 +28,7 @@ export default {
 
   data() {
     return {
-      numbrid: [1, 2, 3, 4]
+      numbrid: [1, 2, 3, 4, 5]
     }
   },
   methods: {}
