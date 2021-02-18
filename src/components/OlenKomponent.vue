@@ -11,7 +11,7 @@ export default {
   name: "OlenKomponent",
   props: {
     player: {
-      default: 'player',
+      default: 'must',
       type: String
     }
   }
