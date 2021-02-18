@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div class="nupp" :class="player"></div>
-  </div>
+
+  <div class="nupp" :class="player"></div>
+
 
 </template>
 
@@ -9,7 +9,12 @@
 
 export default {
   name: "OlenKomponent",
-  props: ['player']
+  props: {
+    player: {
+      default: 'player',
+      type: String
+    }
+  }
 }
 
 
@@ -20,8 +25,6 @@ export default {
 .nupp {
   height: 5em;
   width: 5em;
-  padding: 5px;
-  margin: 8px;
   border-radius: 50em;
 }
 
