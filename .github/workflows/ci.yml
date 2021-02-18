@@ -1,0 +1,16 @@
+name: Tests
+
+on:
+  push:
+    paths-ignore:
+    - '**.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Run tests
+      run: |
+        npm install
+        npm run test:coverage
