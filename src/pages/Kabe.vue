@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import OlenKomponent from "../components/OlenKomponent";
+import OlenKomponent from "../components/kabeNupp";
 
 export default {
   name: "Kabe",

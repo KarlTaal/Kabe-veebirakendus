@@ -1,0 +1,29 @@
+name: Tests
+
+on:
+  push:
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+
+      - name: Run tests
+        run: |
+          npm install
+          npm run test:coverage
+
+      - name: Build
+        run: |
+          npm install
+          npm run build
