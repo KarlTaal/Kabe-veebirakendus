@@ -1,14 +1,11 @@
 <template>
-
-  <div class="nupp" :class="player"></div>
-
-
+    <div class="nupp" :class="player"></div>
 </template>
 
 <script>
 
 export default {
-  name: "OlenKomponent",
+  name: "kabeNupp",
   props: {
     player: {
       default: 'must',
@@ -17,22 +14,31 @@ export default {
   }
 }
 
-
 </script>
 
 <style scoped>
 
 .nupp {
-  height: 5em;
-  width: 5em;
-  border-radius: 50em;
+  height: 70%;
+  width: 70%;
+  border-radius: 100%;
 }
 
 .valge {
-  background-color: white;
+  background-color: silver;
 }
 
 .must {
-  background-color: black;
+  background-color: gold;
+}
+
+.valge:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.must:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 </style>

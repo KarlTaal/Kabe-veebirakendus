@@ -1,17 +1,13 @@
 <template>
   <div class="konteiner">
 
-    <div>
 
-      <div>
-        <OlenKomponent
-           v-for="i in 6"
-           :key="i"
-           :player="i === 2 || i === 4 ? 'must' : 'valge'"
-        ></OlenKomponent>
-      </div>
+    <kabe-laud
 
-    </div>
+    ></kabe-laud>
+
+
+
 
   </div>
 
@@ -20,11 +16,13 @@
 
 <script>
 import OlenKomponent from "../components/kabeNupp";
+import KabeLaud from "@/components/kabeLaud";
+import KabeNupp from "@/components/kabeNupp";
 
 export default {
   name: "Kabe",
 
-  components: {OlenKomponent},
+  components: {KabeNupp, KabeLaud, OlenKomponent},
 
   data() {
     return {
