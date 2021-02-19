@@ -18,5 +18,6 @@ Kasutada grid ja flexbox, et elemente paigutada:
 Mõlema kohta on ka tutorial videoid.
 
 
-## Esialgne disain
+## Disain
+Esialgne disain. Uueneb varsti. Kristiin teeb ilusamaks.
 ![Initial design](https://github.com/KarlTaal/Kabe-veebirakendus/blob/master/designs/initial-mockup.png)
