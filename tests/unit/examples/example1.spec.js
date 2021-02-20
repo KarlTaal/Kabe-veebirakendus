@@ -1,10 +1,10 @@
 import { shallowMount } from "@vue/test-utils";
-import OlenKomponent from "@/components/OlenKomponent";
+import KabeNupp from "@/components/KabeNupp";
 
 describe("Selectors component tests", () => {
 
   it("Example test 1",  () => {
-    const wrapper = shallowMount(OlenKomponent);
+    const wrapper = shallowMount(KabeNupp);
     console.log(wrapper.html());
     expect(1+1).toEqual(2);
   });

@@ -1,36 +1,16 @@
 <template>
   <div class="konteiner">
-
-    <div>
-
-      <div>
-        <OlenKomponent
-           v-for="i in 6"
-           :key="i"
-           :player="i === 2 || i === 4 ? 'must' : 'valge'"
-        ></OlenKomponent>
-      </div>
-
-    </div>
-
+    <kabe-laud/>
   </div>
-
-
 </template>
 
 <script>
-import OlenKomponent from "../components/OlenKomponent";
+import KabeLaud from "@/components/KabeLaud";
+import KabeNupp from "@/components/KabeNupp";
 
 export default {
-  name: "Kabe",
-
-  components: {OlenKomponent},
-
-  data() {
-    return {
-      numbrid: [1, 2, 3, 4, 5]
-    }
-  }
+  name: "kabe",
+  components: {KabeNupp, KabeLaud},
 }
 
 </script>
