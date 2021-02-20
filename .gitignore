@@ -140,6 +140,12 @@ dist
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
+.idea/
+*.iws
+*.iml
+*.ipr
+**/out/
+
 # JIRA plugin
 atlassian-ide-plugin.xml
 
