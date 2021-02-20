@@ -5,13 +5,12 @@
 </template>
 
 <script>
-import OlenKomponent from "../components/KabeNupp";
 import KabeLaud from "@/components/KabeLaud";
 import KabeNupp from "@/components/KabeNupp";
 
 export default {
   name: "kabe",
-  components: {KabeNupp, KabeLaud, OlenKomponent},
+  components: {KabeNupp, KabeLaud},
 }
 
 </script>
