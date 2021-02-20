@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import OlenKomponent from "@/components/kabeNupp";
+import OlenKomponent from "@/components/KabeNupp";
 
 describe("Selectors component tests", () => {
 

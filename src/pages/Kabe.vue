@@ -1,34 +1,17 @@
 <template>
   <div class="konteiner">
-
-
-    <kabe-laud
-
-    ></kabe-laud>
-
-
-
-
+    <kabe-laud/>
   </div>
-
-
 </template>
 
 <script>
-import OlenKomponent from "../components/kabeNupp";
-import KabeLaud from "@/components/kabeLaud";
-import KabeNupp from "@/components/kabeNupp";
+import OlenKomponent from "../components/KabeNupp";
+import KabeLaud from "@/components/KabeLaud";
+import KabeNupp from "@/components/KabeNupp";
 
 export default {
-  name: "Kabe",
-
+  name: "kabe",
   components: {KabeNupp, KabeLaud, OlenKomponent},
-
-  data() {
-    return {
-      numbrid: [1, 2, 3, 4, 5]
-    }
-  }
 }
 
 </script>

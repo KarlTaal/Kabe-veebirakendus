@@ -5,7 +5,7 @@
 <script>
 
 export default {
-  name: "kabeNupp",
+  name: "kabe-nupp",
   props: {
     player: {
       default: 'must',

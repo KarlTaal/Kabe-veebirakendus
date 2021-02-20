@@ -23,16 +23,17 @@
 </template>
 
 <script>
-import KabeNupp from "@/components/kabeNupp";
-import laud from "@/data/gameField.json";
+import KabeNupp from "@/components/KabeNupp";
+import "@/scripts/data";
+import getInitialGameField from "@/scripts/data";
 
 export default {
 
-  name: "Kabe",
+  name: "kabe-laud",
   components: {KabeNupp},
   data() {
     return {
-      gameField: laud
+      gameField: getInitialGameField()
     }
   },
 
@@ -84,7 +85,6 @@ export default {
   }
 
 }
-
 
 </script>
 
