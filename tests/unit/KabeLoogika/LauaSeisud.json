@@ -31,5 +31,50 @@
   [null, null, null, null, null, null, null, null],
   [null, null, null, null, null, null, null, null],
   [null, null, null, null, null, null, null, null]
-]
+],
+
+
+  "nupudAinultRealKaksJaViisTavanupud" : [
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, {"player":"must", "powerful": false}, null, {"player":"must", "powerful": false}, null, {"player":"must", "powerful": false}, null, {"player":"must", "powerful": false}],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [{"player":"valge", "powerful": false}, null, {"player":"valge", "powerful": false}, null, {"player":"valge", "powerful": false}, null, {"player":"valge", "powerful": false}, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null]
+  ],
+
+  "nupudÄärtesTavanupud": [
+    [null, null, null, null, null, null, null, null],
+    [{"player":"must", "powerful": false}, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, {"player":"must", "powerful": false}],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [{"player":"valge", "powerful": false}, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, {"player":"valge", "powerful": false}],
+    [null, null, null, null, null, null, null, null]
+    ],
+
+  "nupudAinultRealKaksJaViisTammiVersioon" : [
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, {"player":"must", "powerful": true}, null, {"player":"must", "powerful": true}, null, {"player":"must", "powerful": true}, null, {"player":"must", "powerful": true}],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [{"player":"valge", "powerful": true}, null, {"player":"valge", "powerful": true}, null, {"player":"valge", "powerful": true}, null, {"player":"valge", "powerful": true}, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null]
+  ],
+
+  "nupudÄärtesTammiVersioon": [
+    [null, null, null, null, null, null, null, null],
+    [{"player":"must", "powerful": true}, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, {"player":"must", "powerful": true}],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [{"player":"valge", "powerful": true}, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, {"player":"valge", "powerful": true}],
+    [null, null, null, null, null, null, null, null]
+  ]
 }
