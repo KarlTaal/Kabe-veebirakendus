@@ -17,11 +17,11 @@ describe("Testid võimalike käikude saamiseks", () => {
     expect(annaRuuduKäigud([5, 0], lauaSeisud.algseis)).toEqual([[[4,1]]]);
     expect(annaRuuduKäigud([5, 4], lauaSeisud.algseis)).toEqual([[[4,3]], [[4, 5]]]);
 
-    expect(annaRuuduKäigud([2, 1], lauaSeisud.nupudAinultRealKaksJaViis)).toEqual([[[3,2]], [[3,0]]]);
-    expect(annaRuuduKäigud([2, 5], lauaSeisud.nupudAinultRealKaksJaViis)).toEqual([[[3,6]], [[3,4]]]);
-    expect(annaRuuduKäigud([2, 7], lauaSeisud.nupudAinultRealKaksJaViis)).toEqual([[[3,6]]]);
-    expect(annaRuuduKäigud([5, 0], lauaSeisud.nupudAinultRealKaksJaViis)).toEqual([[[4,1]]]);
-    expect(annaRuuduKäigud([5, 4], lauaSeisud.nupudAinultRealKaksJaViis)).toEqual([[[4,3]], [[4, 5]]]);
+    expect(annaRuuduKäigud([2, 1], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[3,2]], [[3,0]]]);
+    expect(annaRuuduKäigud([2, 5], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[3,6]], [[3,4]]]);
+    expect(annaRuuduKäigud([2, 7], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[3,6]]]);
+    expect(annaRuuduKäigud([5, 0], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[4,1]]]);
+    expect(annaRuuduKäigud([5, 4], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[4,3]], [[4, 5]]]);
 
     expect(annaRuuduKäigud([1, 2], lauaSeisud.algseis)).toEqual([]);
     expect(annaRuuduKäigud([6, 5], lauaSeisud.algseis)).toEqual([]);
@@ -29,10 +29,10 @@ describe("Testid võimalike käikude saamiseks", () => {
     expect(annaRuuduKäigud([0, 7], lauaSeisud.algseis)).toEqual([]);
     expect(annaRuuduKäigud([1, 0], lauaSeisud.algseis)).toEqual([]);
 
-    expect(annaRuuduKäigud([1, 0], lauaSeisud.nupudÄärtes)).toEqual([[[2,1]]]);
-    expect(annaRuuduKäigud([2, 7], lauaSeisud.nupudÄärtes)).toEqual([[[3,6]]]);
-    expect(annaRuuduKäigud([5, 0], lauaSeisud.nupudÄärtes)).toEqual([[[4,1]]]);
-    expect(annaRuuduKäigud([6, 7], lauaSeisud.nupudÄärtes)).toEqual([[[5,6]]]);
+    expect(annaRuuduKäigud([1, 0], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[2,1]]]);
+    expect(annaRuuduKäigud([2, 7], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[3,6]]]);
+    expect(annaRuuduKäigud([5, 0], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[4,1]]]);
+    expect(annaRuuduKäigud([6, 7], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[5,6]]]);
   });
 
   it("Lihtsamad tammi käigud",  () => {
