@@ -1,8 +1,9 @@
 import lauaSeisud from "./LauaSeisud.json";
 import annaRuuduKäigud from "@/scripts/annaRuuduKäigud";
+import tavaNupuSöömisKäigud from "@/scripts/annaRuuduKäigud";
+
 
 describe("Testid võimalike käikude saamiseks", () => {
-
   //TODO tavanupu käigu testid
   //TODO tammi käikude testid
   //TODO tavanupu söömise testid
@@ -36,15 +37,16 @@ describe("Testid võimalike käikude saamiseks", () => {
   });
 
   it("Lihtsamad tammi käigud",  () => {
-
     expect(annaRuuduKäigud([2, 1], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[1,2]], [[3,2]], [[3,0]], [[1,0]]]);
     expect(annaRuuduKäigud([2, 7], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[3,6]], [[1,6]]]);
     expect(annaRuuduKäigud([5, 4], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[4,5]], [[6,5]], [[6,3]], [[4,3]]]);
     expect(annaRuuduKäigud([5, 0], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[4,1]], [[6,1]]]);
-
-
-
   });
 
+  it("Tavanupu esimesed söömised",  () => {
+    expect(annaRuuduKäigud([1, 0], lauaSeisud.tavaNupuSöömised)).toEqual(true);
+    expect(annaRuuduKäigud([6, 3], lauaSeisud.tavaNupuSöömised)).toEqual(false);
+    expect(annaRuuduKäigud([6, 7], lauaSeisud.tavaNupuSöömised)).toEqual(false);
+  });
 
 });
