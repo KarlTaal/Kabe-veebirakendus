@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="df6be39b-cd34-43d9-a333-a7bdc2c9d961" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/annaRuuduKäigud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/annaRuuduKäigud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/LauaSeisud.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/LauaSeisud.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKäigud.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKäigud.spec.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +24,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/scripts/annaRuuduKäigud.js" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1oZdD48wXEMzjrAlIqURtKJ2k0J" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,7 +38,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1613783498603" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Programmeerimisharjutused(PH)/Kodu3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -48,7 +55,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -56,19 +63,19 @@
       <recent name="C:\Users\Kaur Taal\Documents\Isiklik\Kabe-veebirakendus\tests\unit\KabeLoogika" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Testid võimalike käikude saamiseks">
-    <configuration name="Mängu lõpu kontroll" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/kasMängLäbi.spec.js" />
-      <test-names>
-        <test-name value="Mängu lõpu kontroll" />
-      </test-names>
-      <method v="2" />
+  <component name="RunManager" selected="Jest.Testid võimalike käikude saamiseks.Tavanupu esimesed söömised">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="Testid võimalike käikude saamiseks" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
@@ -125,13 +132,27 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="Testid võimalike käikude saamiseks.Tavanupu esimesed söömised" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKäigud.spec.js" />
+      <test-names>
+        <test-name value="Testid võimalike käikude saamiseks" />
+        <test-name value="Tavanupu esimesed söömised" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Testid võimalike käikude saamiseks" />
+        <item itemvalue="Jest.Testid võimalike käikude saamiseks.Tavanupu esimesed söömised" />
         <item itemvalue="Jest.Testid võimalike käikude saamiseks.Lihtsamad tavanupu käigud" />
+        <item itemvalue="Jest.Testid võimalike käikude saamiseks" />
         <item itemvalue="Jest.Testid võimalike käikude saamiseks.Lihtsamad tammi käigud" />
         <item itemvalue="Jest.Testid võimalike käikude saamiseks.Lihtsaiamad tavanupu käigud" />
-        <item itemvalue="Jest.Mängu lõpu kontroll" />
       </list>
     </recent_temporary>
   </component>
@@ -160,6 +181,8 @@
       <workItem from="1614168873292" duration="21000" />
       <workItem from="1614179417845" duration="144000" />
       <workItem from="1614196595480" duration="20000" />
+      <workItem from="1614796279496" duration="7531000" />
+      <workItem from="1614865539657" duration="9577000" />
     </task>
     <servers />
   </component>
@@ -197,6 +220,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="962" y="194" width="745" height="660" key="#ESLint/0.0.1920.1050@0.0.1920.1050" timestamp="1613781984916" />
+    <state x="1053" y="100" width="774" height="857" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1614876123379">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1053" y="100" width="774" height="857" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1614876123379" />
     <state x="1170" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613779210123">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -205,22 +232,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1220" y="242" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1614196613631" />
-    <state width="1008" height="440" key="GridCell.Tab.0.bottom" timestamp="1614179563472">
+    <state width="914" height="451" key="GridCell.Tab.0.bottom" timestamp="1614876759579">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1008" height="440" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1614179563472" />
-    <state width="1008" height="440" key="GridCell.Tab.0.center" timestamp="1614179563471">
+    <state width="914" height="451" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1614876759579" />
+    <state width="914" height="451" key="GridCell.Tab.0.center" timestamp="1614876759579">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1008" height="440" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1614179563471" />
-    <state width="1008" height="440" key="GridCell.Tab.0.left" timestamp="1614179563471">
+    <state width="914" height="451" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1614876759579" />
+    <state width="914" height="451" key="GridCell.Tab.0.left" timestamp="1614876759579">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1008" height="440" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1614179563470" />
-    <state width="1008" height="440" key="GridCell.Tab.0.right" timestamp="1614179563471">
+    <state width="914" height="451" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1614876759579" />
+    <state width="914" height="451" key="GridCell.Tab.0.right" timestamp="1614876759579">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1008" height="440" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1614179563471" />
+    <state width="914" height="451" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1614876759579" />
     <state x="225" y="18" key="MergeDialog" timestamp="1613781611914">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -229,6 +256,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1078" y="290" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1613781611920" />
+    <state x="922" y="173" key="SettingsEditor" timestamp="1614798569559">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="922" y="173" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1614798569559" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1613758775515">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -237,10 +268,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="685" y="149" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1613670737634" />
-    <state x="1096" y="247" key="run.anything.popup" timestamp="1613775386555">
+    <state x="1096" y="247" key="run.anything.popup" timestamp="1614801541118">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1096" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1613775386555" />
+    <state x="1096" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1614801541118" />
   </component>
   <component name="masterDetails">
     <states>

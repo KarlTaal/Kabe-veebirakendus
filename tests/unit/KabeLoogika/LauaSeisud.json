@@ -83,9 +83,33 @@
     [{"player":"must", "powerful": false}, null, null, null, null, null, null, null],
     [null, {"player":"valge", "powerful": false}, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
-    [null, {"player":"must", "powerful": false}, null,null, null, {"player":"must", "powerful": false}, null, null],
+    [null, null, null,null, null, {"player":"must", "powerful": false}, null, null],
     [null, null, {"player":"must", "powerful": false},null, {"player":"must", "powerful": false}, null, {"player":"must", "powerful": false}, null],
     [null, null,null, {"player":"valge", "powerful": false}, null, null, null, {"player":"valge", "powerful": false}],
     [null, null, null, null, null, null, null, null]
+  ],
+
+  "tavaNupuSöömisedKaksVõimalikkuSöömist": [
+    [null, null, null, null, null, null, null, null],
+    [{"player":"must", "powerful": false}, null, null, null, null, null, null, null],
+    [null, {"player":"valge", "powerful": false}, null, null, null, {"player":"must", "powerful": false}, null, null],
+    [null, null, null, null, {"player":"valge", "powerful": false}, null, {"player":"valge", "powerful": false}, null],
+    [null, null, null,null, null, null, null, null],
+    [null, null, {"player":"must", "powerful": false},null, {"player":"must", "powerful": false}, null, {"player":"must", "powerful": false}, null],
+    [null, null,null, {"player":"valge", "powerful": false}, null, null, null, {"player":"valge", "powerful": false}],
+    [null, null, null, null, null, null, null, null]
+  ],
+
+
+  "tammiSöömised": [
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null],
+    [null, null, null, null, null, null, null, null]
   ]
+
 }

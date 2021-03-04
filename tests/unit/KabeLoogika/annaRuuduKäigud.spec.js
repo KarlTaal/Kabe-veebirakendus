@@ -11,18 +11,19 @@ describe("Testid võimalike käikude saamiseks", () => {
   //TODO edge cased
   //TODO Kõik stsenaarimuid musta ja valge nupu puhul
 
-  it("Lihtsamad tavanupu käigud",  () => {
-    expect(annaRuuduKäigud([2, 1], lauaSeisud.algseis)).toEqual([[[3,2]], [[3,0]]]);
-    expect(annaRuuduKäigud([2, 5], lauaSeisud.algseis)).toEqual([[[3,6]], [[3,4]]]);
-    expect(annaRuuduKäigud([2, 7], lauaSeisud.algseis)).toEqual([[[3,6]]]);
-    expect(annaRuuduKäigud([5, 0], lauaSeisud.algseis)).toEqual([[[4,1]]]);
-    expect(annaRuuduKäigud([5, 4], lauaSeisud.algseis)).toEqual([[[4,3]], [[4, 5]]]);
 
-    expect(annaRuuduKäigud([2, 1], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[3,2]], [[3,0]]]);
-    expect(annaRuuduKäigud([2, 5], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[3,6]], [[3,4]]]);
-    expect(annaRuuduKäigud([2, 7], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[3,6]]]);
-    expect(annaRuuduKäigud([5, 0], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[4,1]]]);
-    expect(annaRuuduKäigud([5, 4], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[4,3]], [[4, 5]]]);
+  it("Lihtsamad tavanupu käigud", () => {
+    expect(annaRuuduKäigud([2, 1], lauaSeisud.algseis)).toEqual([[[3, 2]], [[3, 0]]]);
+    expect(annaRuuduKäigud([2, 5], lauaSeisud.algseis)).toEqual([[[3, 6]], [[3, 4]]]);
+    expect(annaRuuduKäigud([2, 7], lauaSeisud.algseis)).toEqual([[[3, 6]]]);
+    expect(annaRuuduKäigud([5, 0], lauaSeisud.algseis)).toEqual([[[4, 1]]]);
+    expect(annaRuuduKäigud([5, 4], lauaSeisud.algseis)).toEqual([[[4, 3]], [[4, 5]]]);
+
+    expect(annaRuuduKäigud([2, 1], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[3, 2]], [[3, 0]]]);
+    expect(annaRuuduKäigud([2, 5], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[3, 6]], [[3, 4]]]);
+    expect(annaRuuduKäigud([2, 7], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[3, 6]]]);
+    expect(annaRuuduKäigud([5, 0], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[4, 1]]]);
+    expect(annaRuuduKäigud([5, 4], lauaSeisud.nupudAinultRealKaksJaViisTavanupud)).toEqual([[[4, 3]], [[4, 5]]]);
 
     expect(annaRuuduKäigud([1, 2], lauaSeisud.algseis)).toEqual([]);
     expect(annaRuuduKäigud([6, 5], lauaSeisud.algseis)).toEqual([]);
@@ -30,23 +31,32 @@ describe("Testid võimalike käikude saamiseks", () => {
     expect(annaRuuduKäigud([0, 7], lauaSeisud.algseis)).toEqual([]);
     expect(annaRuuduKäigud([1, 0], lauaSeisud.algseis)).toEqual([]);
 
-    expect(annaRuuduKäigud([1, 0], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[2,1]]]);
-    expect(annaRuuduKäigud([2, 7], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[3,6]]]);
-    expect(annaRuuduKäigud([5, 0], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[4,1]]]);
-    expect(annaRuuduKäigud([6, 7], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[5,6]]]);
+    expect(annaRuuduKäigud([1, 0], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[2, 1]]]);
+    expect(annaRuuduKäigud([2, 7], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[3, 6]]]);
+    expect(annaRuuduKäigud([5, 0], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[4, 1]]]);
+    expect(annaRuuduKäigud([6, 7], lauaSeisud.nupudÄärtesTavanupud)).toEqual([[[5, 6]]]);
   });
 
-  it("Lihtsamad tammi käigud",  () => {
-    expect(annaRuuduKäigud([2, 1], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[1,2]], [[3,2]], [[3,0]], [[1,0]]]);
-    expect(annaRuuduKäigud([2, 7], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[3,6]], [[1,6]]]);
-    expect(annaRuuduKäigud([5, 4], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[4,5]], [[6,5]], [[6,3]], [[4,3]]]);
-    expect(annaRuuduKäigud([5, 0], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[4,1]], [[6,1]]]);
+  it("Lihtsamad tammi käigud", () => {
+    expect(annaRuuduKäigud([2, 1], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[1, 2]], [[3, 2]], [[3, 0]], [[1, 0]]]);
+    expect(annaRuuduKäigud([2, 7], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[3, 6]], [[1, 6]]]);
+    expect(annaRuuduKäigud([5, 4], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[4, 5]], [[6, 5]], [[6, 3]], [[4, 3]]]);
+    expect(annaRuuduKäigud([5, 0], lauaSeisud.nupudAinultRealKaksJaViisTammiVersioon)).toEqual([[[4, 1]], [[6, 1]]]);
   });
 
-  it("Tavanupu esimesed söömised",  () => {
-    expect(annaRuuduKäigud([1, 0], lauaSeisud.tavaNupuSöömised)).toEqual(true);
-    expect(annaRuuduKäigud([6, 3], lauaSeisud.tavaNupuSöömised)).toEqual(false);
-    expect(annaRuuduKäigud([6, 7], lauaSeisud.tavaNupuSöömised)).toEqual(false);
+  it("Tavanupu esimesed söömised", () => {
+    expect(annaRuuduKäigud([1, 0], lauaSeisud.tavaNupuSöömised)).toEqual([[[3, 2]]]);
+    expect(annaRuuduKäigud([6, 3], lauaSeisud.tavaNupuSöömised)).toEqual([[[4, 1]]]);
+    expect(annaRuuduKäigud([6, 7], lauaSeisud.tavaNupuSöömised)).toEqual([]);
+    expect(annaRuuduKäigud([6, 3], lauaSeisud.tavaNupuSöömisedKaksVõimalikkuSöömist)).toEqual([[[4, 1]], [[4, 5]]]);
+    expect(annaRuuduKäigud([6, 7], lauaSeisud.tavaNupuSöömisedKaksVõimalikkuSöömist)).toEqual([[[4, 5]]]);
+    expect(annaRuuduKäigud([2, 5], lauaSeisud.tavaNupuSöömisedKaksVõimalikkuSöömist)).toEqual([[[4, 7]], [[4, 3]]]);
+
+  });
+
+  it("Tammi esimesed söömised", () => {
+    expect(annaRuuduKäigud([4, 3], lauaSeisud.tammiSöömised)).toEqual([[[3, 4]], [[5, 4]], [[5, 2]], [[3, 2]]]);
+
   });
 
 });
