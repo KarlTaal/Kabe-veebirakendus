@@ -43,7 +43,8 @@
 <script>
 import KabeNupp from "@/components/KabeNupp";
 import "@/scripts/data";
-import getInitialGameField from "@/scripts/data";
+import ErinevadLauaSeisud from "../../tests/unit/KabeLoogika/erinevadLauaSeisud";
+
 
 export default {
 
@@ -51,7 +52,7 @@ export default {
   components: {KabeNupp},
   data() {
     return {
-      gameField: getInitialGameField()
+      gameField: ErinevadLauaSeisud().tammiTavaKäigudValge
     }
   },
 
