@@ -5,80 +5,98 @@
 const annaRuuduKäigud = (ruut, mänguväljak) => {
   const kasOnTamm = mänguväljak[ruut[0]][ruut[1]].powerful;
 
-  if (!kasOnTamm) {
 
-    if (kasSaabKäia(ruut, mänguväljak)) {
+    if (!kasOnTamm) {
+      const tavaNupp = [];
 
-      if (kasSaabVasakule(ruut, mänguväljak) && kasSaabParemale(ruut, mänguväljak))
-        return tavaSööParemaleVõiVasakule(ruut, mänguväljak);
-
-      else if (kasSaabParemale(ruut, mänguväljak) || kasSaabVasakule(ruut, mänguväljak)) {
+      if (kasSaabKäia(ruut, mänguväljak)) {
 
         if (kasSaabVasakule(ruut, mänguväljak))
-          return tavaVasakuleSöömised(ruut, mänguväljak);
+          tavaNupp.push(tavaVasakuleSöömised(ruut, mänguväljak));
 
-        else if (kasSaabParemale(ruut, mänguväljak))
-          return tavaParemaleSöömised(ruut, mänguväljak);
+        if (kasSaabParemale(ruut, mänguväljak))
+          tavaNupp.push(tavaParemaleSöömised(ruut, mänguväljak));
+
+        if (tavaNupp.length === 0)
+          return tavanupuKäigud(ruut, mänguväljak);
+
+        return tavaNupp;
 
       } else
-        return tavanupuKäigud(ruut, mänguväljak);
-    } else
-      return [];
-  }//Tavakäigud
+        return [];
+    }//Tavanupukäigud
 
   if (kasOnTamm){
+    let võimalikudKäigudEtte = [];
+    let võimalikudKäigudTaha = [];
+    let tammiKäigudEtte = [];
+    let tammiKäigudTaha = [];
+    let tammiSöömisKäigud = [];
+    let tammiKäigud = [];
+    let peabSööma = false;
 
-    if (kasSaabKäia(ruut, mänguväljak) || kasSaabTahaKäia(ruut, mänguväljak)){
 
-      if (kasSaabKäia(ruut, mänguväljak) && !kasSaabTahaKäia(ruut, mänguväljak)){
-        //-------------------------Sama, mis tavanupuKäigud------------------------------------//
-        if (kasSaabVasakule(ruut, mänguväljak) && kasSaabParemale(ruut, mänguväljak))
-          return tavaSööParemaleVõiVasakule(ruut, mänguväljak);
 
-        else if (kasSaabParemale(ruut, mänguväljak) || kasSaabVasakule(ruut, mänguväljak)) {
+    //Vaatame tavanupu käigud üle
+    if (kasSaabKäia(ruut, mänguväljak)) {
 
-          if (kasSaabVasakule(ruut, mänguväljak))
-            return tavaVasakuleSöömised(ruut, mänguväljak);
-
-          else if (kasSaabParemale(ruut, mänguväljak))
-            return tavaParemaleSöömised(ruut, mänguväljak);
-
-        } else
-          return tavanupuKäigud(ruut, mänguväljak);
-        //-------------------------------------------------------------------------------------//
+      if (kasSaabParemale(ruut, mänguväljak)) {
+        võimalikudKäigudEtte.push(tavaParemaleSöömised(ruut, mänguväljak));
+        peabSööma = true;
       }
 
-      else if(kasSaabTahaKäia(ruut, mänguväljak) && !kasSaabKäia(ruut, mänguväljak)){
-
-        if (kasSaabTahaVasakule(ruut, mänguväljak) && kasSaabTahaParemale(ruut, mänguväljak))
-          return tahaSööParemaleVõiVasakule(ruut, mänguväljak);
-
-        else if (kasSaabTahaParemale(ruut, mänguväljak) || kasSaabTahaVasakule(ruut, mänguväljak)) {
-
-          if (kasSaabTahaVasakule(ruut, mänguväljak))
-            return vasakuleSöömisedTaha(ruut, mänguväljak);
-
-          else if (kasSaabTahaParemale(ruut, mänguväljak))
-            return aremaleSöömisedTaha(ruut, mänguväljak);
-
-        } else
-          return tammiNupuKäigud(ruut, mänguväljak);
+      if (kasSaabVasakule(ruut, mänguväljak)) {
+        võimalikudKäigudEtte.push(tavaVasakuleSöömised(ruut, mänguväljak));
+        peabSööma = true;
       }
 
-    } else
-      return [];
+      //Ei ole võimalikke söömisi, siis saab vabalt käia
+      if (võimalikudKäigudEtte.length === 0)
+        tammiKäigudEtte = [...tavanupuKäigud(ruut, mänguväljak)];
+    }//Tava variandid
 
-  }//Tammikäigud
+    //Taha käigud
+    if (kasSaabTahaKäia(ruut, mänguväljak)){
+
+      if (kasSaabTahaParemale(ruut, mänguväljak)) {
+        if (paremaleSöömisedTaha(ruut, mänguväljak)) {
+          võimalikudKäigudTaha.push(paremaleSöömisedTaha(ruut, mänguväljak));
+          peabSööma = true;
+        }
+      }
+
+      if (kasSaabTahaVasakule(ruut, mänguväljak)) {
+        if (vasakuleSöömisedTaha(ruut, mänguväljak)) {
+          võimalikudKäigudTaha.push(vasakuleSöömisedTaha(ruut, mänguväljak));
+          peabSööma = true;
+        }
+      }
+
+      if (võimalikudKäigudTaha.length === 0)
+        tammiKäigudTaha = [...tammiNupuKäigud(ruut, mänguväljak)];
+    }
+
+    if (peabSööma) {
+      tammiSöömisKäigud = [...võimalikudKäigudEtte, ...võimalikudKäigudTaha];
+      return tammiSöömisKäigud;
+    }
+    else {
+      tammiKäigud = [...tammiKäigudEtte, ...tammiKäigudTaha];
+      return tammiKäigud;
+    }
+
+  }else
+    return[];
+
+  }//RuuduKäigud
 
 
-}
 
 const tammiNupuKäigud = (ruut, mänguväljak) => {
   const nupp = mänguväljak[ruut[0]][ruut[1]].player;
   const võimalikudKäigud = [];
 
   if (nupp === "must") {
-    const reaIndeks1 = ruut[0] + 1;
     const tulbaIndeks1 = ruut[1] + 1;
     const tulbaIndeks2 = ruut[1] - 1;
     const reaIndeks2 = ruut[0] - 1;
@@ -86,25 +104,16 @@ const tammiNupuKäigud = (ruut, mänguväljak) => {
     if (mänguväljak[reaIndeks2][tulbaIndeks1] === null)
       võimalikudKäigud.push([[reaIndeks2, tulbaIndeks1]])
 
-    if (mänguväljak[reaIndeks1][tulbaIndeks1] === null)
-      võimalikudKäigud.push([[reaIndeks1, tulbaIndeks1]])
-
-    if (mänguväljak[reaIndeks1][tulbaIndeks2] === null)
-      võimalikudKäigud.push([[reaIndeks1, tulbaIndeks2]])
-
     if (mänguväljak[reaIndeks2][tulbaIndeks2] === null)
       võimalikudKäigud.push([[reaIndeks2, tulbaIndeks2]])
 
   }
 
   if (nupp === "valge") {
-    const reaIndeks1 = ruut[0] - 1;
     const tulbaIndeks1 = ruut[1] - 1;
     const tulbaIndeks2 = ruut[1] + 1;
     const reaIndeks2 = ruut[0] + 1;
 
-    if (mänguväljak[reaIndeks1][tulbaIndeks2] === null)
-      võimalikudKäigud.push([[reaIndeks1, tulbaIndeks2]])
 
     if (mänguväljak[reaIndeks2][tulbaIndeks2] === null)
       võimalikudKäigud.push([[reaIndeks2, tulbaIndeks2]])
@@ -112,8 +121,6 @@ const tammiNupuKäigud = (ruut, mänguväljak) => {
     if (mänguväljak[reaIndeks2][tulbaIndeks1] === null)
       võimalikudKäigud.push([[reaIndeks2, tulbaIndeks1]])
 
-    if (mänguväljak[reaIndeks1][tulbaIndeks1] === null)
-      võimalikudKäigud.push([[reaIndeks1, tulbaIndeks1]])
 
   }
   return võimalikudKäigud;
@@ -304,14 +311,15 @@ const paremaleSöömisedTaha = (ruut, mänguväljak) => {
     const järgmineRida = ruut[0] - 2;
     const järgmineTulp = ruut[1] - 2;
 
+
     if (mänguväljak[rida][tulp] && mänguväljak[rida][tulp].player === "valge") {
       if (mänguväljak[järgmineRida][järgmineTulp] === null) {
-        võimalikudSöömised.push([[järgmineRida, järgmineTulp]]);
+        võimalikudSöömised.push([järgmineRida, järgmineTulp]);
       } else {
-        võimalikudSöömised.push([[]]);
+        võimalikudSöömised.push([]);
       }
     } else
-      võimalikudSöömised.push([[]]);
+      võimalikudSöömised.push([]);
 
     return võimalikudSöömised;
   }//Must
@@ -324,12 +332,12 @@ const paremaleSöömisedTaha = (ruut, mänguväljak) => {
 
     if (mänguväljak[rida][tulp] && mänguväljak[rida][tulp].player === "must") {
       if (mänguväljak[järgmineRida][järgmineTulp] === null) {
-        võimalikudSöömised.push([[järgmineRida, järgmineTulp]]);
+        võimalikudSöömised.push([järgmineRida, järgmineTulp]);
       } else {
-        võimalikudSöömised.push([[]]);
+        võimalikudSöömised.push([]);
       }
     } else
-      võimalikudSöömised.push([[]]);
+      võimalikudSöömised.push([]);
 
     return võimalikudSöömised;
   }//Valge
@@ -349,12 +357,12 @@ const vasakuleSöömisedTaha = (ruut, mänguväljak) => {
 
     if (mänguväljak[rida][tulp] && mänguväljak[rida][tulp].player === "valge") {
       if (mänguväljak[järgmineRida][järgmineTulp] === null) {
-        võimalikudSöömised.push([[järgmineRida, järgmineTulp]]);
+        võimalikudSöömised.push([järgmineRida, järgmineTulp]);
       } else {
-        võimalikudSöömised.push([[]]);
+        võimalikudSöömised.push([]);
       }
     } else
-      võimalikudSöömised.push([[]]);
+      võimalikudSöömised.push([]);
 
     return võimalikudSöömised;
   }//Must
@@ -367,12 +375,12 @@ const vasakuleSöömisedTaha = (ruut, mänguväljak) => {
 
     if (mänguväljak[rida][tulp] && mänguväljak[rida][tulp].player === "must") {
       if (mänguväljak[järgmineRida][järgmineTulp] === null) {
-        võimalikudSöömised.push([[järgmineRida, järgmineTulp]]);
+        võimalikudSöömised.push([järgmineRida, järgmineTulp]);
       } else {
-        võimalikudSöömised.push([[]]);
+        võimalikudSöömised.push([]);
       }
     } else
-      võimalikudSöömised.push([[]]);
+      võimalikudSöömised.push([]);
 
     return võimalikudSöömised;
   }//Valge
@@ -393,6 +401,8 @@ const tahaSööParemaleVõiVasakule = (ruut, mänguväljak) => {
 const tavanupuKäigud = (ruut, mänguväljak) => {
   const nupp = mänguväljak[ruut[0]][ruut[1]].player;
   const võimalikudKäigud = [];
+  const käigud = [];
+
 
   if (nupp === "must") {
     const reaIndeks = ruut[0] + 1;
@@ -402,9 +412,9 @@ const tavanupuKäigud = (ruut, mänguväljak) => {
     if (mänguväljak[reaIndeks][tulbaIndeks1] === null)
       võimalikudKäigud.push([[reaIndeks, tulbaIndeks1]])
 
-    if (mänguväljak[reaIndeks][tulbaIndeks2] === null)
-      võimalikudKäigud.push([[reaIndeks, tulbaIndeks2]])
 
+    if (mänguväljak[reaIndeks][tulbaIndeks2] === null)
+      võimalikudKäigud.push([[reaIndeks, tulbaIndeks2]]);
   }
 
   if (nupp === "valge") {
@@ -413,10 +423,10 @@ const tavanupuKäigud = (ruut, mänguväljak) => {
     const tulbaIndeks2 = ruut[1] + 1;
 
     if (mänguväljak[reaIndeks][tulbaIndeks1] === null)
-      võimalikudKäigud.push([[reaIndeks, tulbaIndeks1]])
+      võimalikudKäigud.push([[reaIndeks, tulbaIndeks1]]);
 
     if (mänguväljak[reaIndeks][tulbaIndeks2] === null)
-      võimalikudKäigud.push([[reaIndeks, tulbaIndeks2]])
+      võimalikudKäigud.push([[reaIndeks, tulbaIndeks2]]);
 
   }
 
@@ -437,12 +447,12 @@ const tavaVasakuleSöömised = (ruut, mänguväljak) => {
 
     if (mänguväljak[reaIndeks][tulbaIndeks] && mänguväljak[reaIndeks][tulbaIndeks].player === "must") {
       if (mänguväljak[järgmineRida][järgmineTulp] === null) {
-        võimalikudSöömised.push([[järgmineRida, järgmineTulp]]);
+        võimalikudSöömised.push([järgmineRida, järgmineTulp]);
       } else {
-        võimalikudSöömised.push([[]]);
+        võimalikudSöömised.push([]);
       }
     } else
-      võimalikudSöömised.push([[]]);
+      võimalikudSöömised.push([]);
 
     return võimalikudSöömised;
 
@@ -459,11 +469,11 @@ const tavaVasakuleSöömised = (ruut, mänguväljak) => {
 
     if (mänguväljak[reaIndeks][tulbaIndeks] && mänguväljak[reaIndeks][tulbaIndeks].player === "valge") {
       if (mänguväljak[järgmineRida][järgmineTulp] === null) {
-        võimalikudSöömised.push([[järgmineRida, järgmineTulp]]);
+        võimalikudSöömised.push([järgmineRida, järgmineTulp]);
       } else         //Ei tea, kas on vaja, aga better safe than sorry
-        võimalikudSöömised.push([[]]);
+        võimalikudSöömised.push([]);
     } else
-      võimalikudSöömised.push([[]]);
+      võimalikudSöömised.push([]);
 
     return võimalikudSöömised;
   }
@@ -483,11 +493,11 @@ const tavaParemaleSöömised = (ruut, mänguväljak) => {
 
     if (mänguväljak[reaIndeks][tulbaIndeks] && mänguväljak[reaIndeks][tulbaIndeks].player === "must") {
       if (mänguväljak[järgmineRida][järgmineTulp] === null) {
-        võimalikudSöömised.push([[järgmineRida, järgmineTulp]]);
+        võimalikudSöömised.push([järgmineRida, järgmineTulp]);
       } else         //Ei tea, kas on vaja, aga better safe than sorry
-        võimalikudSöömised.push([[]]);
+        võimalikudSöömised.push([]);
     } else
-      võimalikudSöömised.push([[]]);
+      võimalikudSöömised.push([]);
 
     return võimalikudSöömised;
   }
@@ -501,11 +511,11 @@ const tavaParemaleSöömised = (ruut, mänguväljak) => {
 
     if (mänguväljak[reaIndeks][tulbaIndeks] && mänguväljak[reaIndeks][tulbaIndeks].player === "valge") {
       if (mänguväljak[järgmineRida][järgmineTulp] === null) {
-        võimalikudSöömised.push([[järgmineRida, järgmineTulp]]);
+        võimalikudSöömised.push([järgmineRida, järgmineTulp]);
       } else
-        võimalikudSöömised.push([[]]);
+        võimalikudSöömised.push([]);
     } else
-      võimalikudSöömised.push([[]]);
+      võimalikudSöömised.push([]);
 
     return võimalikudSöömised;
   }
@@ -543,9 +553,7 @@ const kasSaabKäia = (ruut, mänguväljak) => {
   }
 }
 
-const tavaNupuSöömisKäigud = (ruut, mänguväljak) => {
 
-}
 
 const tavaSööParemaleVõiVasakule = (ruut, mänguväljak) => {
   const nupp = mänguväljak[ruut[0]][ruut[1]].player;
@@ -559,3 +567,42 @@ const tavaSööParemaleVõiVasakule = (ruut, mänguväljak) => {
 }
 
 export default annaRuuduKäigud;
+
+
+/*
+const annaRuuduKäigud = (ruut, mänguväljak) => {
+  const kasOnTamm = mänguväljak[ruut[0]][ruut[1]].powerful;
+
+  if (!kasOnTamm) {
+
+    if (kasSaabKäia(ruut, mänguväljak)) {
+
+      if (kasSaabVasakule(ruut, mänguväljak) && kasSaabParemale(ruut, mänguväljak))
+        return tavaSööParemaleVõiVasakule(ruut, mänguväljak);
+
+      else if (kasSaabParemale(ruut, mänguväljak) || kasSaabVasakule(ruut, mänguväljak)) {
+
+        if (kasSaabVasakule(ruut, mänguväljak))
+          return tavaVasakuleSöömised(ruut, mänguväljak);
+
+        else if (kasSaabParemale(ruut, mänguväljak))
+          return tavaParemaleSöömised(ruut, mänguväljak);
+
+      } else
+        return tavanupuKäigud(ruut, mänguväljak);
+    } else
+      return [];
+  }//Tavakäigud
+
+  if (kasOnTamm){
+    const võimalikudKäigud = [];
+
+    //Käsitleme algul nagu tavanuppu ja leiame võimalikud käigud.
+    if (kasSaabKäia(ruut, mänguväljak))
+
+
+
+
+    return võimalikudKäigud;
+  }//Tammikäigud
+ */

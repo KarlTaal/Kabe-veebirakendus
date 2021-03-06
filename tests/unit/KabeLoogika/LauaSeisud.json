@@ -105,9 +105,9 @@
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null, null],
+    [null, null, {"player":"valge", "powerful": false}, null, {"player":"valge", "powerful": false}, null, null, null],
+    [null, null, null, {"player":"must", "powerful": true}, null, null, null, null],
+    [null, null, {"player":"valge", "powerful": false}, null, {"player":"valge", "powerful": false}, null, null, null],
     [null, null, null, null, null, null, null, null],
     [null, null, null, null, null, null, null, null]
   ]
