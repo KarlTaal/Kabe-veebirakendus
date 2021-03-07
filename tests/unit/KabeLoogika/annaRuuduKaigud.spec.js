@@ -130,6 +130,7 @@ describe("Testid võimalike käikude saamiseks tammiga", () => {
         expect(käigud[2]).toEqual([[1,2]]);
         expect(käigud[3]).toEqual([[1,6]]);
     });
+    /*
 
     it("Tammi söömised rasked valge", () => {
         const käigud = annaRuuduKäigud([2, 1], ErinevadLauaSeisud().tammiSöömisedKeerulineValge);
@@ -152,6 +153,8 @@ describe("Testid võimalike käikude saamiseks tammiga", () => {
         expect(käigud[4]).toEqual([[4,3],[6,5],[4,7],[2,5],[0,7]]);
         expect(käigud[5]).toEqual([[4,3],[6,5],[4,7],[2,5],[4,3],[6,1]]);
     });
+
+     */
 });
 
 
