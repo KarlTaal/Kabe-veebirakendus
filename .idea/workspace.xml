@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df6be39b-cd34-43d9-a333-a7bdc2c9d961" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.husky/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.husky/pre-commit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Kabe-veebirakendus.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/KabeLaud.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeLaud.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/KabeNupp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeNupp.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/annaRuuduKäigud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/annaRuuduKäigud.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/LauaSeisud.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKäigud.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/kasSaabSüüa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/sooritaKäik.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/sooritaKäik.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/erinevadLauaSeisud.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/erinevadLauaSeisud.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,99 +73,100 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kaur Taal\Documents\Isiklik\Kabe-veebirakendus\tests\unit" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kaur Taal\Documents\Isiklik\Kabe-veebirakendus\tests\unit\KabeLoogika" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Testid võimalike käikude saamiseks tammiga.Tammi tava käigud valge">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.Testid võimalike käikude saamiseks tammiga">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Testid võimalike käikude saamiseks tammiga.Tammi tava käigud must" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Testid söömiste jaoks" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/sooritaKäik.spec.js" />
+      <test-names>
+        <test-name value="Testid söömiste jaoks" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Testid söömiste jaoks.Tava nupu söömine tammiks" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/sooritaKäik.spec.js" />
+      <test-names>
+        <test-name value="Testid söömiste jaoks" />
+        <test-name value="Tava nupu söömine tammiks" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Testid võimalike käikude saamiseks tammiga" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
       <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" />
       <test-names>
         <test-name value="Testid võimalike käikude saamiseks tammiga" />
-        <test-name value="Tammi tava käigud must" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Testid võimalike käikude saamiseks tammiga.Tammi tava käigud valge" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Testid võimalike käikude saamiseks tava nupuga (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/sooritaKäik.spec.js" />
       <test-names>
-        <test-name value="Testid võimalike käikude saamiseks tammiga" />
-        <test-name value="Tammi tava käigud valge" />
+        <test-name value="Testid võimalike käikude saamiseks tava nupuga" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Testid võimalike käikude saamiseks tava nupuga.Tava nupu ühe sammulised söömised must" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Testid võimalike käikude saamiseks tava nupuga" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
+      <scope-kind value="SUITE" />
       <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" />
       <test-names>
         <test-name value="Testid võimalike käikude saamiseks tava nupuga" />
-        <test-name value="Tava nupu ühe sammulised söömised must" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Testid võimalike käikude saamiseks tava nupuga.Tava nupu ühe sammulised söömised seinad valge" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" />
-      <test-names>
-        <test-name value="Testid võimalike käikude saamiseks tava nupuga" />
-        <test-name value="Tava nupu ühe sammulised söömised seinad valge" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="Testid võimalike käikude saamiseks tava nupuga.Tava nupu ühe sammulised söömised valge" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" />
-      <test-names>
-        <test-name value="Testid võimalike käikude saamiseks tava nupuga" />
-        <test-name value="Tava nupu ühe sammulised söömised valge" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Testid võimalike käikude saamiseks tammiga.Tammi tava käigud valge" />
-        <item itemvalue="Jest.Testid võimalike käikude saamiseks tammiga.Tammi tava käigud must" />
-        <item itemvalue="Jest.Testid võimalike käikude saamiseks tava nupuga.Tava nupu ühe sammulised söömised must" />
-        <item itemvalue="Jest.Testid võimalike käikude saamiseks tava nupuga.Tava nupu ühe sammulised söömised valge" />
-        <item itemvalue="Jest.Testid võimalike käikude saamiseks tava nupuga.Tava nupu ühe sammulised söömised seinad valge" />
+        <item itemvalue="Jest.Testid võimalike käikude saamiseks tammiga" />
+        <item itemvalue="Jest.Testid võimalike käikude saamiseks tava nupuga" />
+        <item itemvalue="Jest.Testid söömiste jaoks" />
+        <item itemvalue="Jest.Testid söömiste jaoks.Tava nupu söömine tammiks" />
+        <item itemvalue="Jest.Testid võimalike käikude saamiseks tava nupuga (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -184,6 +199,7 @@
       <workItem from="1614865539657" duration="10019000" />
       <workItem from="1614932083235" duration="48000" />
       <workItem from="1615047662048" duration="13522000" />
+      <workItem from="1615125355022" duration="13644000" />
     </task>
     <servers />
   </component>
@@ -221,42 +237,47 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="962" y="194" width="745" height="660" key="#ESLint/0.0.1920.1050@0.0.1920.1050" timestamp="1613781984916" />
-    <state x="812" y="257" width="774" height="857" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1615061319170">
+    <state x="1501" y="27" width="409" height="561" maximized="true" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1615145218293">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="1501" y="27" width="409" height="561" maximized="true" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145218293" />
     <state x="812" y="257" width="774" height="857" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1615061319170" />
     <state x="1170" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613779210123">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1170" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1613779210123" />
-    <state x="1220" y="242" key="FileChooserDialogImpl" timestamp="1614932126217">
+    <state x="1220" y="242" key="FileChooserDialogImpl" timestamp="1615125318636">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1220" y="242" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1614932126217" />
-    <state width="986" height="368" key="GridCell.Tab.0.bottom" timestamp="1615061285818">
+    <state x="1220" y="242" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1615125318636" />
+    <state width="1805" height="309" key="GridCell.Tab.0.bottom" timestamp="1615145673023">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="986" height="368" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1615061285818" />
-    <state width="986" height="368" key="GridCell.Tab.0.center" timestamp="1615061285818">
+    <state width="1805" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673023" />
+    <state width="1877" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
+    <state width="1805" height="309" key="GridCell.Tab.0.center" timestamp="1615145673012">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="986" height="368" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1615061285818" />
-    <state width="986" height="368" key="GridCell.Tab.0.left" timestamp="1615061285818">
+    <state width="1805" height="309" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
+    <state width="1877" height="371" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
+    <state width="1805" height="309" key="GridCell.Tab.0.left" timestamp="1615145673012">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="986" height="368" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1615061285818" />
-    <state width="986" height="368" key="GridCell.Tab.0.right" timestamp="1615061285818">
+    <state width="1805" height="309" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
+    <state width="1877" height="371" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
+    <state width="1805" height="309" key="GridCell.Tab.0.right" timestamp="1615145673012">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="986" height="368" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1615061285818" />
-    <state x="225" y="18" key="MergeDialog" timestamp="1613781611914">
+    <state width="1805" height="309" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
+    <state width="1877" height="371" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
+    <state x="225" y="18" key="MergeDialog" timestamp="1615125284405">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="225" y="18" key="MergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1613781611914" />
-    <state x="1078" y="290" key="MultipleFileMergeDialog" timestamp="1613781611920">
+    <state x="225" y="18" key="MergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1615125284405" />
+    <state x="1078" y="290" key="MultipleFileMergeDialog" timestamp="1615125284462">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1078" y="290" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1613781611920" />
+    <state x="1078" y="290" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1615125284462" />
     <state x="922" y="173" key="SettingsEditor" timestamp="1614798569559">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -265,6 +286,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1050@0.0.1920.1050" timestamp="1613758775515" />
+    <state x="4" y="-1080" width="974" height="1057" key="dock-window-1" timestamp="1615146349845">
+      <screen x="11" y="-1080" width="1920" height="1050" />
+    </state>
+    <state x="-1927" y="-73" width="1045" height="1057" key="dock-window-1/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615134109283" />
+    <state x="4" y="-1080" width="974" height="1057" key="dock-window-1/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146349845" />
     <state x="685" y="149" key="new project wizard" timestamp="1614932131631">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

@@ -31,6 +31,7 @@
       <kabe-nupp
       v-if="ruut"
       :player="ruut.player"
+      :powerful="ruut.powerful"
       />
 
       </div>
@@ -43,7 +44,7 @@
 <script>
 import KabeNupp from "@/components/KabeNupp";
 import "@/scripts/data";
-import ErinevadLauaSeisud from "../../tests/unit/KabeLoogika/erinevadLauaSeisud";
+import ErinevadLauaSeisud from "../../tests/unit/erinevadLauaSeisud";
 
 
 export default {
@@ -52,7 +53,7 @@ export default {
   components: {KabeNupp},
   data() {
     return {
-      gameField: ErinevadLauaSeisud().tammiTavaKäigudValge
+      gameField: ErinevadLauaSeisud().tavaSöömisedKeerulineMust
     }
   },
 
@@ -97,8 +98,6 @@ export default {
         return "ruutMust"
       if (!isEvenRow && !isEvenCol)
         return "ruutValge"
-
-
     }
 
   }

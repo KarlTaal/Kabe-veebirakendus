@@ -18,6 +18,10 @@ Kasutada grid ja flexbox, et elemente paigutada:
 Mõlema kohta on ka tutorial videoid.
 
 
+## Kabe vastase nuppude söömis käikude leidmise algoritm
+https://docs.google.com/spreadsheets/d/1OkPYW_BUYP7ey7aRPbLo7NTjgqvBiIKClpq5BKi_3oA/edit?usp=sharing
+
+
 ## Disain
 Esialgne disain. Uueneb varsti. Kristiin teeb ilusamaks.
 ![Initial design](https://github.com/KarlTaal/Kabe-veebirakendus/blob/master/designs/initial-mockup.png)

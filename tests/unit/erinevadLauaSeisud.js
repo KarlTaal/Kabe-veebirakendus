@@ -2,14 +2,14 @@ const ErinevadLauaSeisud = () => {
     return {
         ////////////////////////////////////////////////////////////////////TAVANUPU VÄLJAKUD
         tavaNupuTavaKäigudValge: [
+            [null, {player:"valge", powerful: false}, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, {player:"valge", powerful: false}],
+            [null, null, null, null, null, null, null, null],
             [null, null, null, null, null, null, null, null],
             [null, null, null, null, null, null, {player:"valge", powerful: false}, null],
             [null, {player:"valge", powerful: false}, null, null, null, {player:"valge", powerful: false}, null, {player:"valge", powerful: false}],
-            [{player:"valge", powerful: false}, null, {player:"valge", powerful: false}, null, null, null, null, null],
-            [null, null, null, null, null, null, null, null],
-            [{player:"valge", powerful: false}, null, null, null, null, null, null, null],
-            [null, null, null, null, null, null, null, {player:"valge", powerful: false}],
-            [null, null, null, null, null, null, null, null],
+            [{player:"valge", powerful: false}, null,{player:"valge", powerful: false}, null, null, null, null, null],
         ],
         tavaNupuTavaKäigudMust: [
             [null, null, null, null, null, null, null, null],
@@ -32,14 +32,14 @@ const ErinevadLauaSeisud = () => {
             [null, null, null, null, null, null, null, null]
         ],
         tavaNupuÜheSammulisedSöömisedMustSeinad: [
-            [null, {player:"valge", powerful: false}, null, {player:"valge", powerful: false}, null, null, null, {player:"valge", powerful: false}],
-            [{player:"must", powerful: false}, null, {player:"must", powerful: false}, null, null, null, {player:"must", powerful: false}, null],
-            [null, null, null, null, null, null, null, null],
-            [null, null, null, null, null, null, null, null],
-            [null, null, null, null, null, null, null, {player:"valge", powerful: false}],
-            [{player:"valge", powerful: false}, null, null, null, null, null, {player:"must", powerful: false}, null],
             [null, {player:"must", powerful: false}, null, null, null, null, null, null],
-            [null, null, null, null, null, null, null, null]
+            [{player:"valge", powerful: false}, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, {player:"must", powerful: false}],
+            [null, null, null, null, null, null, {player:"valge", powerful: false}, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, {player:"must", powerful: false}, null, null, null, {player:"must", powerful: false}, null, {player:"must", powerful: false}],
+            [{player:"valge", powerful: false}, null, null, null, {player:"valge", powerful: false}, null, {player:"valge", powerful: false}, null]
         ],
         tavaNupuÜheSammulisedSöömisedValgeBlokitud: [
             [null, null, null, null, null, null, null, null],
@@ -78,6 +78,28 @@ const ErinevadLauaSeisud = () => {
             [null, null, null, null, {player:"must", powerful: false}, null, null, null],
             [null, null, null, {player:"valge", powerful: false}, null, {player:"valge", powerful: false}, null, null],
             [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+        tavaSöömisedKeerulineValge: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, {player:"must", powerful: false}, null, null, null, null, null, null],
+            [{player:"valge", powerful: false}, null, null, null, null, null, null, null]
+        ],
+
+        tavaSöömisedKeerulineMust: [
+            [null, null, null, null, null, null, null, {player:"must", powerful: false}],
+            [null, null, null, null, null, null, {player:"valge", powerful: false}, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, {player:"valge", powerful: false}, null, {player:"valge", powerful: false}, null, {player:"valge", powerful: false}, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, {player:"valge", powerful: false}, null, {player:"valge", powerful: false}, null, {player:"valge", powerful: false}, null],
             [null, null, null, null, null, null, null, null],
             [null, null, null, null, null, null, null, null]
         ],
@@ -183,7 +205,140 @@ const ErinevadLauaSeisud = () => {
             [null, null, {player:"valge", powerful: true}, null, {player:"valge", powerful: true}, null, {player:"valge", powerful: true}, null],
             [null, null, null, null, null, null, null, null],
             [null, null, null, null, null, null, null, null]
+        ],
+
+        ////////////////////////////////////////////////////////////Tavanupu liikumised///////////////////////////////
+        tavaNupuSöömisteLiikumineÜlesseParemale: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, {player:"valge", powerful: false}, null],
+            [null, null, null, {player:"must", powerful: false}, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+        tavaNupuSöömisteLiikumineAllaParemale: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, {player:"must", powerful: false}, null, null, null, null],
+            [null, null, null, null, null, null, {player:"valge", powerful: false}, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+        tavaNupuSöömisteLiikumineAllaVasakule: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, {player:"must", powerful: false}, null, null],
+            [null, null, {player:"valge", powerful: false}, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+        tavaNupuSöömisteLiikumineÜlesseVasakule: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, {player:"valge", powerful: false}, null, null, null, null, null],
+            [null, null, null, null, null, {player:"must", powerful: false}, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+        kasValgeLähebTammiksEnneSöömist: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, {player:"must", powerful: false}, null, null, null, null, null],
+            [null, null, null, {player:"valge", powerful: false}, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+        kasValgeLähebTammiksPealeSöömist: [
+            [null, {player:"valge", powerful: true}, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+        kasMustLähebTammiksEnneSöömist: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, {player:"must", powerful: false}, null],
+            [null, null, null, null, null, {player:"valge", powerful: false}, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+        kasMustLähebTammiksPealeSöömist: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, {player:"must", powerful: true}, null, null, null]
+        ],
+
+        tavaliseNupuLiikumineEnneValge: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [{player:"valge", powerful: false}, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+        tavaliseNupuLiikuminePärastValge: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, {player:"valge", powerful: false}, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+        tavaliseNupuLiikumineEnneMust: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, {player:"must", powerful: false}, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+        tavaliseNupuLiikuminePärastMust: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [{player:"must", powerful: false}, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
         ]
+
     }
 };
 
