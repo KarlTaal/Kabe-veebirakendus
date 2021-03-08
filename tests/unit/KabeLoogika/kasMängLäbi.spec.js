@@ -1,18 +1,18 @@
-import lauaSeisud from "./LauaSeisud.json";
+import ErinevadLauaSeisud from "../erinevadLauaSeisud";
 import kasLõpp from "@/scripts/kasMängLäbi";
 
 describe("Mängu lõpu kontroll", () => {
 
   it("Kas tagastab 'null' kui võitjat pole veel",  () => {
-    expect(kasLõpp(lauaSeisud.algseis)).toEqual(null);
+    expect(kasLõpp(ErinevadLauaSeisud().tavaSöömisedKeerulineValge)).toEqual(null);
   });
 
   it("Kas tagastab 'valge' kui võitja on valge",  () => {
-    expect(kasLõpp(lauaSeisud.valgeVõitja)).toEqual("valge");
+    expect(kasLõpp(ErinevadLauaSeisud().tavaNupuTavaKäigudValge)).toEqual("valge");
   });
 
     it("Kas tagastab 'must' kui võitja on valge",  () => {
-      expect(kasLõpp(lauaSeisud.mustVõitja)).toEqual("must");
+      expect(kasLõpp(ErinevadLauaSeisud().tavaNupuTavaKäigudMust)).toEqual("must");
     });
 });
 

@@ -53,7 +53,7 @@ export default {
   components: {KabeNupp},
   data() {
     return {
-      gameField: ErinevadLauaSeisud().tavaSöömisedKeerulineMust
+      gameField: ErinevadLauaSeisud().tavaSöömisedKeerulineValge
     }
   },
 

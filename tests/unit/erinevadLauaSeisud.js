@@ -1,5 +1,6 @@
 const ErinevadLauaSeisud = () => {
     return {
+
         ////////////////////////////////////////////////////////////////////TAVANUPU VÄLJAKUD
         tavaNupuTavaKäigudValge: [
             [null, {player:"valge", powerful: false}, null, null, null, null, null, null],

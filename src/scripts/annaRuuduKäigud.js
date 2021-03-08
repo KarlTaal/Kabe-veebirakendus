@@ -1,110 +1,117 @@
-
+import sooritaKäik from "@/scripts/sooritaKäik";
 
 
 const annaRuuduKäigud = (ruut, mänguväljak) => {
   const kasOnTamm = mänguväljak[ruut[0]][ruut[1]].powerful;
+  const söömised = annaSöömised(ruut, mänguväljak);
 
-    if (!kasOnTamm) {
-      const tavaNupp = [];
+  if (söömised.length !== 0)
+    return söömised;
 
+  return kasOnTamm ? tammiNupuKäigud(ruut, mänguväljak) : tavanupuKäigud(ruut, mänguväljak);
 
-      if (kasSaabKäia(ruut, mänguväljak)) {
-
-        if (kasSaabVasakule(ruut, mänguväljak))
-          tavaNupp.push(tavaVasakuleSöömised(ruut, mänguväljak));
-
-        if (kasSaabParemale(ruut, mänguväljak))
-          tavaNupp.push(tavaParemaleSöömised(ruut, mänguväljak));
-
-        if (tavaNupp.length === 0)
-          return tavanupuKäigud(ruut, mänguväljak);
+}//RuuduKäigud
 
 
-        return tavaNupp;
+const annaSöömised = (ruut, mänguväljak) => {
+  const kasOnTamm = mänguväljak[ruut[0]][ruut[1]].powerful;
+  const vastus = [];
+  const stack = [];
 
-      } else
-        return [];
-    }//Tavanupukäigud
+  const söömised = kasOnTamm ? tammiSöömised(ruut, mänguväljak) : tavaNupuSöömised(ruut, mänguväljak);
+  if (söömised.length === 0)
+    return [];
 
-  if (kasOnTamm){
-    let võimalikudKäigudEtte = [];
-    let võimalikudKäigudTaha = [];
-    let tammiKäigudEtte = [];
-    let tammiKäigudTaha = [];
-    let tammiSöömisKäigud = [];
-    let tammiKäigud = [];
-    let peabSööma = false;
+  for (let i = 0; i < söömised.length; i++) {
+    stack.push({
+      field: sooritaKäik([ruut, söömised[i][0]], mänguväljak),
+      tee: [söömised[i][0]]
+    });
+  }
 
-
-
-    //Vaatame tavanupu käigud üle
-    if (kasSaabKäia(ruut, mänguväljak)) {
-
-      if (kasSaabParemale(ruut, mänguväljak)) {
-        võimalikudKäigudEtte.push(tavaParemaleSöömised(ruut, mänguväljak));
-        peabSööma = true;
-      }
-
-      if (kasSaabVasakule(ruut, mänguväljak)) {
-        võimalikudKäigudEtte.push(tavaVasakuleSöömised(ruut, mänguväljak));
-        peabSööma = true;
-      }
-
-      //Ei ole võimalikke söömisi, siis saab vabalt käia
-      if (võimalikudKäigudEtte.length === 0)
-        tammiKäigudEtte = [...tavanupuKäigud(ruut, mänguväljak)];
-    }//Tava variandid
-
-    //Taha käigud
-    if (kasSaabTahaKäia(ruut, mänguväljak)){
-
-      if (kasSaabTahaParemale(ruut, mänguväljak)) {
-        if (paremaleSöömisedTaha(ruut, mänguväljak)) {
-          võimalikudKäigudTaha.push(paremaleSöömisedTaha(ruut, mänguväljak));
-          peabSööma = true;
-        }
-      }
-
-      if (kasSaabTahaVasakule(ruut, mänguväljak)) {
-        if (vasakuleSöömisedTaha(ruut, mänguväljak)) {
-          võimalikudKäigudTaha.push(vasakuleSöömisedTaha(ruut, mänguväljak));
-          peabSööma = true;
-        }
-      }
-
-      if (võimalikudKäigudTaha.length === 0)
-        tammiKäigudTaha = [...tammiNupuKäigud(ruut, mänguväljak)];
-    }
-
-    if (peabSööma) {
-      tammiSöömisKäigud = [...võimalikudKäigudEtte, ...võimalikudKäigudTaha];
-      return tammiSöömisKäigud;
-    }
+  while (stack.length !== 0) {
+    const seis = stack.pop()
+    const kasOnTamm = seis.field[seis.tee[seis.tee.length - 1][0]][seis.tee[seis.tee.length - 1][1]].powerful;
+    const söömised = kasOnTamm ? tammiSöömised(seis.tee[[seis.tee.length - 1]], seis.field) : tavaNupuSöömised(seis.tee[[seis.tee.length - 1]], seis.field);
+    if (söömised.length === 0)
+      vastus.push(seis.tee)
     else {
-      tammiKäigud = [...tammiKäigudEtte, ...tammiKäigudTaha];
-      return tammiKäigud;
+      for (let i = 0; i < söömised.length; i++) {
+        const uusSeis = sooritaKäik([seis.tee[seis.tee.length - 1], söömised[i][0]], seis.field)
+        stack.push({
+          field: uusSeis,
+          tee: [...seis.tee, söömised[i][0]]
+        });
+      }//for
+    }//else
+  }//While
+  return vastus;
+};
+
+
+const tavaNupuSöömised = (ruut, mänguväljak) => {
+  const tavaNupp = [];
+  if (kasSaabKäia(ruut, mänguväljak)) {
+    if (kasSaabVasakule(ruut, mänguväljak))
+      tavaNupp.push(tavaVasakuleSöömised(ruut, mänguväljak));
+
+    if (kasSaabParemale(ruut, mänguväljak))
+      tavaNupp.push(tavaParemaleSöömised(ruut, mänguväljak));
+  }
+  return tavaNupp;
+}
+
+
+const tammiSöömised = (ruut, mänguväljak) => {
+  let võimalikudKäigudEtte = [];
+  let võimalikudKäigudTaha = [];
+  let tammiSöömisKäigud = [];
+
+  //Vaatame tavanupu käigud üle
+  if (kasSaabParemale(ruut, mänguväljak)) {
+    võimalikudKäigudEtte.push(tavaParemaleSöömised(ruut, mänguväljak));
+  }
+  if (kasSaabVasakule(ruut, mänguväljak)) {
+    võimalikudKäigudEtte.push(tavaVasakuleSöömised(ruut, mänguväljak));
+  }
+  //Ette söömised
+
+  //Taha söömised
+  if (kasSaabTahaParemale(ruut, mänguväljak)) {
+    if (paremaleSöömisedTaha(ruut, mänguväljak)) {
+      võimalikudKäigudTaha.push(paremaleSöömisedTaha(ruut, mänguväljak));
     }
+  }
 
-  }else
-    return[];
+  if (kasSaabTahaVasakule(ruut, mänguväljak)) {
+    if (vasakuleSöömisedTaha(ruut, mänguväljak)) {
+      võimalikudKäigudTaha.push(vasakuleSöömisedTaha(ruut, mänguväljak));
+    }
+  }
 
-  }//RuuduKäigud
+  tammiSöömisKäigud = [...võimalikudKäigudEtte, ...võimalikudKäigudTaha];
+  return tammiSöömisKäigud;
+
+}//TammisSöömisKäigud
+
 
 const tammiNupuKäigud = (ruut, mänguväljak) => {
   const nupp = mänguväljak[ruut[0]][ruut[1]].player;
   const võimalikudKäigud = [];
+  võimalikudKäigud.push(...tavanupuKäigud(ruut, mänguväljak));
 
   if (nupp === "must") {
     const tulbaIndeks1 = ruut[1] + 1;
     const tulbaIndeks2 = ruut[1] - 1;
     const reaIndeks2 = ruut[0] - 1;
 
-    if (mänguväljak[reaIndeks2][tulbaIndeks1] === null)
-      võimalikudKäigud.push([[reaIndeks2, tulbaIndeks1]])
+    if (mänguväljak[reaIndeks2]) {
+      if (mänguväljak[reaIndeks2][tulbaIndeks1] === null)
+        võimalikudKäigud.push([[reaIndeks2, tulbaIndeks1]])
 
-    if (mänguväljak[reaIndeks2][tulbaIndeks2] === null)
-      võimalikudKäigud.push([[reaIndeks2, tulbaIndeks2]])
-
+      if (mänguväljak[reaIndeks2][tulbaIndeks2] === null)
+        võimalikudKäigud.push([[reaIndeks2, tulbaIndeks2]])
+    }
   }
 
   if (nupp === "valge") {
@@ -112,14 +119,13 @@ const tammiNupuKäigud = (ruut, mänguväljak) => {
     const tulbaIndeks2 = ruut[1] + 1;
     const reaIndeks2 = ruut[0] + 1;
 
+    if (mänguväljak[reaIndeks2]) {
+      if (mänguväljak[reaIndeks2][tulbaIndeks2] === null)
+        võimalikudKäigud.push([[reaIndeks2, tulbaIndeks2]])
 
-    if (mänguväljak[reaIndeks2][tulbaIndeks2] === null)
-      võimalikudKäigud.push([[reaIndeks2, tulbaIndeks2]])
-
-    if (mänguväljak[reaIndeks2][tulbaIndeks1] === null)
-      võimalikudKäigud.push([[reaIndeks2, tulbaIndeks1]])
-
-
+      if (mänguväljak[reaIndeks2][tulbaIndeks1] === null)
+        võimalikudKäigud.push([[reaIndeks2, tulbaIndeks1]])
+    }
   }
   return võimalikudKäigud;
 }
@@ -207,7 +213,6 @@ const kasSaabParemale = (ruut, mänguväljak) => {
 }
 
 
-//Vaatab ainult, tahapoole. Saaks ilmselt seda teha ka "kasSaabVasakule" meetodis. Sama "kasSaabParemale" puhul
 const kasSaabTahaVasakule = (ruut, mänguväljak) => {
   const nupp = mänguväljak[ruut[0]][ruut[1]].player;
 
@@ -415,34 +420,24 @@ const vasakuleSöömisedTaha = (ruut, mänguväljak) => {
 
 }
 
-const tahaSööParemaleVõiVasakule = (ruut, mänguväljak) => {
-  const nupp = mänguväljak[ruut[0]][ruut[1]].player;
-
-  const vasakule = vasakuleSöömisedTaha(ruut, mänguväljak);
-  const paremale = paremaleSöömisedTaha(ruut, mänguväljak);
-  vasakule[1] = paremale[0];
-
-  return vasakule;
-}
-
 
 const tavanupuKäigud = (ruut, mänguväljak) => {
   const nupp = mänguväljak[ruut[0]][ruut[1]].player;
   const võimalikudKäigud = [];
-  const käigud = [];
-
 
   if (nupp === "must") {
     const reaIndeks = ruut[0] + 1;
     const tulbaIndeks1 = ruut[1] + 1;
     const tulbaIndeks2 = ruut[1] - 1;
 
-    if (mänguväljak[reaIndeks][tulbaIndeks1] === null)
-      võimalikudKäigud.push([[reaIndeks, tulbaIndeks1]])
+    if (mänguväljak[reaIndeks]) {
+      if (mänguväljak[reaIndeks][tulbaIndeks1] === null)
+        võimalikudKäigud.push([[reaIndeks, tulbaIndeks1]])
 
 
-    if (mänguväljak[reaIndeks][tulbaIndeks2] === null)
-      võimalikudKäigud.push([[reaIndeks, tulbaIndeks2]]);
+      if (mänguväljak[reaIndeks][tulbaIndeks2] === null)
+        võimalikudKäigud.push([[reaIndeks, tulbaIndeks2]]);
+    }
   }
 
   if (nupp === "valge") {
@@ -450,12 +445,13 @@ const tavanupuKäigud = (ruut, mänguväljak) => {
     const tulbaIndeks1 = ruut[1] - 1;
     const tulbaIndeks2 = ruut[1] + 1;
 
-    if (mänguväljak[reaIndeks][tulbaIndeks1] === null)
-      võimalikudKäigud.push([[reaIndeks, tulbaIndeks1]]);
+    if (mänguväljak[reaIndeks]) {
+      if (mänguväljak[reaIndeks][tulbaIndeks1] === null)
+        võimalikudKäigud.push([[reaIndeks, tulbaIndeks1]]);
 
-    if (mänguväljak[reaIndeks][tulbaIndeks2] === null)
-      võimalikudKäigud.push([[reaIndeks, tulbaIndeks2]]);
-
+      if (mänguväljak[reaIndeks][tulbaIndeks2] === null)
+        võimalikudKäigud.push([[reaIndeks, tulbaIndeks2]]);
+    }
   }
 
   return võimalikudKäigud;
