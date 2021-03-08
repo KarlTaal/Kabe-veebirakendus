@@ -1,5 +1,14 @@
 <template>
-    <div class="nupp" :class="[player, powerful]"></div>
+    <div
+        class="nupp"
+        :class="[player, powerful]"
+    >
+      <i
+          class="fas fa-skull tammi-ikoon"
+          :class="player === 'must' ? 'tammi-ikoon-must' : 'tammi-ikoon-valge'"
+          v-show="powerful"
+      ></i>
+    </div>
 </template>
 
 <script>
@@ -26,6 +35,9 @@ export default {
   height: 70%;
   width: 70%;
   border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .valge {
@@ -34,6 +46,16 @@ export default {
 
 .must {
   background-color: black;
+}
+
+.tammi-ikoon-must{
+ font-size: 2em;
+  color: white;
+}
+
+.tammi-ikoon-valge{
+  font-size: 2em;
+  color: black;
 }
 
 
