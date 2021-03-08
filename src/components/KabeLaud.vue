@@ -1,7 +1,25 @@
 <template>
-  <div class="konteiner">
+  <div class="konteiner" style="flex-direction: row">
+
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div
+          v-for="i in 8"
+          :key="i"
+          style="display: flex;  align-items:center; justify-content: flex-end; margin-right: 5px; width: 6em; height: 6em;"
+      >
+        {{i-1}}
+      </div>
+    </div>
 
     <div class="field">
+      <div
+          v-for="i in 8"
+          :key="i"
+          style="display: flex; justify-content: center"
+      >
+        {{i-1}}
+      </div>
+
 
       <div
           v-for="(ruut, index) in gameSquares"
@@ -13,6 +31,7 @@
       <kabe-nupp
       v-if="ruut"
       :player="ruut.player"
+      :powerful="ruut.powerful"
       />
 
       </div>
@@ -25,7 +44,8 @@
 <script>
 import KabeNupp from "@/components/KabeNupp";
 import "@/scripts/data";
-import getInitialGameField from "@/scripts/data";
+import ErinevadLauaSeisud from "../../tests/unit/erinevadLauaSeisud";
+
 
 export default {
 
@@ -33,7 +53,7 @@ export default {
   components: {KabeNupp},
   data() {
     return {
-      gameField: getInitialGameField()
+      gameField: ErinevadLauaSeisud().tavaSöömisedKeerulineValge
     }
   },
 
@@ -78,8 +98,6 @@ export default {
         return "ruutMust"
       if (!isEvenRow && !isEvenCol)
         return "ruutValge"
-
-
     }
 
   }

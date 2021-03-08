@@ -1,5 +1,5 @@
 <template>
-    <div class="nupp" :class="player"></div>
+    <div class="nupp" :class="[player, powerful]"></div>
 </template>
 
 <script>
@@ -9,6 +9,10 @@ export default {
   props: {
     player: {
       default: 'must',
+      type: String
+    },
+    powerful: {
+      default: 'mustTamm',
       type: String
     }
   }
@@ -25,12 +29,13 @@ export default {
 }
 
 .valge {
-  background-color: silver;
+  background-color: white;
 }
 
 .must {
-  background-color: gold;
+  background-color: black;
 }
+
 
 .valge:hover {
   cursor: pointer;

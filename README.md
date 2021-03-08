@@ -23,5 +23,5 @@ https://docs.google.com/spreadsheets/d/1OkPYW_BUYP7ey7aRPbLo7NTjgqvBiIKClpq5BKi_
 
 
 ## Disain
-Esialgne disain. Uueneb varsti. Kristiin teeb ilusamaks.
+Esialgne disain.
 ![Initial design](https://github.com/KarlTaal/Kabe-veebirakendus/blob/master/designs/initial-mockup.png)
