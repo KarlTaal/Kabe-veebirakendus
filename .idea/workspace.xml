@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="df6be39b-cd34-43d9-a333-a7bdc2c9d961" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/KabeLaud.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeLaud.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/annaRuuduKäigud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/annaRuuduKäigud.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/sooritaKäik.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/sooritaKäik.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/kasMängLäbi.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/kasMängLäbi.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/sooritaKäik.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/sooritaKäik.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/erinevadLauaSeisud.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/erinevadLauaSeisud.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/examples/example1.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/KabeNupp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeNupp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
