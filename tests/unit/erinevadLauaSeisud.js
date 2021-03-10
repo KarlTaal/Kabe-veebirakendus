@@ -106,6 +106,30 @@ const ErinevadLauaSeisud = () => {
         ],
 
 
+        tavaValgeKõikErinevadKäigud: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, null, null],
+            [null, null, null, null, null, {player:"valge", powerful: false}, null, null],
+            [null, null, null, null, null, null, {player:"valge", powerful: false}, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+        tavaMustaKõikErinevadKäigud: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, {player:"must", powerful: false}, null],
+            [null, null, null, null, null, {player:"must", powerful: false}, null, null],
+            [null, null, {player:"valge", powerful: false}, null, {player:"valge", powerful: false}, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, {player:"valge", powerful: false}, null, {player:"valge", powerful: false}, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null]
+        ],
+
+
+
         ////////////////////////////////////////////////////////////////////TAMMI VÄLJAKUD
         tammiTavaKäigudValge: [
             [null, {player:"valge", powerful: true}, null, null, null, null, null, {player:"valge", powerful: true}],
