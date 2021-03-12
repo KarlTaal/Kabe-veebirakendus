@@ -64,7 +64,7 @@
       <recent name="C:\Users\Kaur Taal\Documents\Isiklik\Kabe-veebirakendus\tests\unit\KabeLoogika" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Testid võimalike käikude saamiseks tava nupuga">
+  <component name="RunManager" selected="Jest.Testid mängija skoori arvutamiseks">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -89,31 +89,30 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Testid võimalike käikude saamiseks tammiga.Tammi söömised rasked must" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Testid mängija skoori arvutamiseks" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/hindaMänguLaud.spec.js" />
       <test-names>
-        <test-name value="Testid võimalike käikude saamiseks tammiga" />
-        <test-name value="Tammi söömised rasked must" />
+        <test-name value="Testid mängija skoori arvutamiseks" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Testid võimalike käikude saamiseks tammiga.Tammi söömised rasked valge" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Testid mängija skoori arvutamiseks.Ainult valged tavalised nupud" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" />
+      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/hindaMänguLaud.spec.js" />
       <test-names>
-        <test-name value="Testid võimalike käikude saamiseks tammiga" />
-        <test-name value="Tammi söömised rasked valge" />
+        <test-name value="Testid mängija skoori arvutamiseks" />
+        <test-name value="Ainult valged tavalised nupud" />
       </test-names>
       <method v="2" />
     </configuration>
@@ -142,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Testid mängija skoori arvutamiseks" />
+        <item itemvalue="Jest.Testid mängija skoori arvutamiseks.Ainult valged tavalised nupud" />
         <item itemvalue="Jest.Testid võimalike käikude saamiseks tava nupuga" />
         <item itemvalue="Jest.Mängu lõpu kontroll" />
         <item itemvalue="Jest.annaRuuduKaigud.spec.js" />
-        <item itemvalue="Jest.Testid võimalike käikude saamiseks tammiga.Tammi söömised rasked must" />
-        <item itemvalue="Jest.Testid võimalike käikude saamiseks tammiga.Tammi söömised rasked valge" />
       </list>
     </recent_temporary>
   </component>
@@ -221,12 +220,16 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="962" y="194" width="745" height="660" key="#ESLint/0.0.1920.1050@0.0.1920.1050" timestamp="1613781984916" />
-    <state x="633" y="-973" width="1025" height="799" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1615405591824">
+    <state x="159" y="-894" width="1025" height="799" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1615574212378">
       <screen x="0" y="-1080" width="1920" height="1050" />
     </state>
     <state x="1501" y="27" width="409" height="561" maximized="true" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145218293" />
-    <state x="633" y="-973" width="1025" height="799" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405591824" />
+    <state x="159" y="-894" width="1025" height="799" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615574212378" />
     <state x="812" y="257" width="774" height="857" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1615061319170" />
+    <state x="730" y="-753" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615572832197">
+      <screen x="0" y="-1080" width="1920" height="1050" />
+    </state>
+    <state x="730" y="-753" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615572832197" />
     <state x="1170" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613779210123">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -236,32 +239,32 @@
     </state>
     <state x="1220" y="242" key="FileChooserDialogImpl/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615303974294" />
     <state x="1220" y="242" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1615125318636" />
-    <state width="1001" height="441" key="GridCell.Tab.0.bottom" timestamp="1615405648869">
+    <state width="1877" height="255" key="GridCell.Tab.0.bottom" timestamp="1615574262247">
       <screen x="0" y="-1080" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673023" />
-    <state width="1001" height="441" key="GridCell.Tab.0.bottom/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
+    <state width="1877" height="255" key="GridCell.Tab.0.bottom/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615574262247" />
     <state width="1819" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
-    <state width="1001" height="441" key="GridCell.Tab.0.center" timestamp="1615405648869">
+    <state width="1877" height="255" key="GridCell.Tab.0.center" timestamp="1615574262246">
       <screen x="0" y="-1080" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
-    <state width="1001" height="441" key="GridCell.Tab.0.center/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
+    <state width="1877" height="255" key="GridCell.Tab.0.center/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615574262246" />
     <state width="1819" height="309" key="GridCell.Tab.0.center/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="371" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
-    <state width="1001" height="441" key="GridCell.Tab.0.left" timestamp="1615405648869">
+    <state width="1877" height="255" key="GridCell.Tab.0.left" timestamp="1615574262246">
       <screen x="0" y="-1080" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
-    <state width="1001" height="441" key="GridCell.Tab.0.left/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
+    <state width="1877" height="255" key="GridCell.Tab.0.left/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615574262246" />
     <state width="1819" height="309" key="GridCell.Tab.0.left/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="371" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
-    <state width="1001" height="441" key="GridCell.Tab.0.right" timestamp="1615405648869">
+    <state width="1877" height="255" key="GridCell.Tab.0.right" timestamp="1615574262247">
       <screen x="0" y="-1080" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
-    <state width="1001" height="441" key="GridCell.Tab.0.right/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
+    <state width="1877" height="255" key="GridCell.Tab.0.right/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615574262247" />
     <state width="1819" height="309" key="GridCell.Tab.0.right/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="371" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
     <state x="225" y="18" key="MergeDialog" timestamp="1615125284405">
