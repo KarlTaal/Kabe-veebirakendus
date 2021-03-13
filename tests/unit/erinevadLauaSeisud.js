@@ -362,7 +362,31 @@ const ErinevadLauaSeisud = () => {
             [null, null, null, null, null, null, null, null],
             [null, null, null, null, null, null, null, null],
             [null, null, null, null, null, null, null, null]
-        ]
+        ],
+
+        tammiKõikKäigudMust: [
+            [null, null, null, null, null, null, null, {player:"must", powerful: true}],
+            [null, null, null, null, null, null, {player:"valge", powerful: false}, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, {player:"valge", powerful: false}, null, {player:"valge", powerful: false}, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, {player:"valge", powerful: false}, null, null, null],
+            [null, {player:"must", powerful: true}, null, null, null, null, null, null],
+            [{player:"valge", powerful: false}, null, null, null, null, null, null, null]
+        ],
+
+        tammiKõikKäigudValge: [
+            [null, null, null, null, null, null, null, {player:"must", powerful: false}],
+            [null, null, null, null, null, null, {player:"valge", powerful: true}, null],
+            [null, null, null, {player:"must", powerful: false}, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, {player:"must", powerful: false}, null, null, null, null, null, null],
+            [{player:"valge", powerful: true}, null, null, null, null, null, null, null]
+        ],
+
+
 
     }
 };
