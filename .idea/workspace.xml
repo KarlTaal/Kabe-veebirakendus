@@ -117,23 +117,30 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="annaRuuduKaigud.spec.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Testid võimalike käikude saamiseks tava nupuga" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaRuuduKaigud.spec.js" />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaKõikKäigud.spec.js" />
+      <test-names>
+        <test-name value="Testid võimalike käikude saamiseks tava nupuga" />
+      </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Testid mängija skoori arvutamiseks" />
-        <item itemvalue="Jest.Testid mängija skoori arvutamiseks.Ainult valged tavalised nupud" />
+        <item itemvalue="Jest.Testid kõikide ühe tüübi nuppude käikude saamiseks(Tammid).Tammi kõik käigud must" />
+        <item itemvalue="Jest.Testid kõikide ühe tüübi nuppude käikude saamiseks(Tammid)" />
+        <item itemvalue="Jest.Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud)" />
         <item itemvalue="Jest.Testid võimalike käikude saamiseks tava nupuga" />
         <item itemvalue="Jest.Mängu lõpu kontroll" />
         <item itemvalue="Jest.annaRuuduKaigud.spec.js" />
+        <item itemvalue="Jest.Testid võimalike käikude saamiseks tammiga.Tammi söömised rasked must" />
+        <item itemvalue="Jest.Testid võimalike käikude saamiseks tammiga.Tammi söömised rasked valge" />
+        <item itemvalue="Jest.Testid võimalike käikude saamiseks tammiga.Tammi ühe sammulised söömised must" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +245,8 @@
       <screen x="0" y="-1080" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
-    <state width="1877" height="255" key="GridCell.Tab.0.center/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615574568625" />
+    <state width="1001" height="441" key="GridCell.Tab.0.center/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
+    <state width="1877" height="254" key="GridCell.Tab.0.center/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615654818603" />
     <state width="1819" height="309" key="GridCell.Tab.0.center/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="371" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
     <state width="1877" height="255" key="GridCell.Tab.0.left" timestamp="1615574568625">
