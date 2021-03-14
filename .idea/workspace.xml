@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df6be39b-cd34-43d9-a333-a7bdc2c9d961" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/KabeLaud.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeLaud.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/annaKõikKäigud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/annaKõikKäigud.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/hinda.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/hinda.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaKõikKäigud.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaKõikKäigud.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/hindaMänguLaud.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/hindaMänguLaud.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/erinevadLauaSeisud.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/erinevadLauaSeisud.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
