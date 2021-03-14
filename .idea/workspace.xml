@@ -4,8 +4,7 @@
     <list default="true" id="df6be39b-cd34-43d9-a333-a7bdc2c9d961" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/KabeLaud.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeLaud.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/annaKõikKäigud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/annaKõikKäigud.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaKõikKäigud.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaKõikKäigud.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/KabeNupp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeNupp.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/unit/erinevadLauaSeisud.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/erinevadLauaSeisud.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,6 +187,8 @@
       <workItem from="1615228963779" duration="11152000" />
       <workItem from="1615303897354" duration="80000" />
       <workItem from="1615401792682" duration="4097000" />
+      <workItem from="1615743894058" duration="653000" />
+      <workItem from="1615750482945" duration="8682000" />
     </task>
     <servers />
   </component>
@@ -240,37 +241,41 @@
     </state>
     <state x="1220" y="242" key="FileChooserDialogImpl/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615303974294" />
     <state x="1220" y="242" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1615125318636" />
-    <state width="1877" height="254" key="GridCell.Tab.0.bottom" timestamp="1615654818604">
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom" timestamp="1615758594639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673023" />
     <state width="1001" height="441" key="GridCell.Tab.0.bottom/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
     <state width="1877" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615654818604" />
     <state width="1819" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
+    <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
     <state width="1877" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
-    <state width="1877" height="254" key="GridCell.Tab.0.center" timestamp="1615654818603">
+    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1615758594639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
     <state width="1001" height="441" key="GridCell.Tab.0.center/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
     <state width="1877" height="254" key="GridCell.Tab.0.center/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615654818603" />
     <state width="1819" height="309" key="GridCell.Tab.0.center/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
+    <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
     <state width="1877" height="371" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
-    <state width="1877" height="254" key="GridCell.Tab.0.left" timestamp="1615654818603">
+    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1615758594639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
     <state width="1001" height="441" key="GridCell.Tab.0.left/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
     <state width="1877" height="254" key="GridCell.Tab.0.left/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615654818603" />
     <state width="1819" height="309" key="GridCell.Tab.0.left/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
+    <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
     <state width="1877" height="371" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
-    <state width="1877" height="254" key="GridCell.Tab.0.right" timestamp="1615654818603">
+    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1615758594639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
     <state width="1001" height="441" key="GridCell.Tab.0.right/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
     <state width="1877" height="254" key="GridCell.Tab.0.right/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615654818603" />
     <state width="1819" height="309" key="GridCell.Tab.0.right/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
+    <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
     <state width="1877" height="371" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
     <state x="225" y="18" key="MergeDialog" timestamp="1615125284405">
       <screen x="0" y="0" width="1920" height="1050" />

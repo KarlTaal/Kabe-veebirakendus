@@ -2,6 +2,7 @@
     <div
         class="nupp"
         :class="[player, powerful]"
+        @click="handleKabenupuKlikk"
     >
       <i
           class="fas fa-skull tammi-ikoon"
@@ -21,8 +22,18 @@ export default {
       type: String
     },
     powerful: {
-      default: 'mustTamm',
-      type: String
+      default: false,
+      type: Boolean
+    },
+    position: {
+      default: null,
+      type: Array
+    }
+  },
+
+  methods: {
+    handleKabenupuKlikk() {
+      this.$emit("nupuKlikk", this.position)
     }
   }
 }
