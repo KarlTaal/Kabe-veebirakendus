@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df6be39b-cd34-43d9-a333-a7bdc2c9d961" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tests/unit/erinevadLauaSeisud.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/erinevadLauaSeisud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/KabeLaud.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeLaud.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/data.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +65,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Jest.Testid kõikide ühe tüübi nuppude käikude saamiseks(Tammid).Tammi kõik käigud must">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Mängu lõpu kontroll" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -219,6 +232,10 @@
     <state x="1501" y="27" width="409" height="561" maximized="true" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145218293" />
     <state x="633" y="-973" width="1025" height="799" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405591824" />
     <state x="812" y="257" width="774" height="857" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1615061319170" />
+    <state x="1042" y="335" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615841508087">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1042" y="335" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1615841508087" />
     <state x="1170" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613779210123">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

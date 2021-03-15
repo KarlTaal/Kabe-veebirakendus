@@ -50,6 +50,9 @@ import annaRuuduKäigud from "@/scripts/annaRuuduKäigud";
 import KabeNupp from "@/components/KabeNupp";
 import "@/scripts/data";
 import ErinevadLauaSeisud from "../../tests/unit/erinevadLauaSeisud";
+import rumalAi from "@/AI/rumalAI";
+import getInitialGameField from "@/scripts/data";
+
 
 
 export default {
@@ -60,13 +63,14 @@ export default {
     return {
       gameField: [[]],
       valitudNupp: null,
-      kasutaja: "valge"
+      kasutaja: "valge",
+      aktiivneMängija: "valge"
     }
   },
 
   methods: {
     algSeadistaLaud(){
-      const uusLaud = ErinevadLauaSeisud().tammiSöömisedKeerulineValge;
+      const uusLaud = getInitialGameField();//ErinevadLauaSeisud().tammiSöömisedKeerulineValge;
       for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j++) {
           if (uusLaud[i][j]) //ehk ei ole null
@@ -132,10 +136,30 @@ export default {
       if (kasOnSihtkoht) {
         this.eemaldaSihtkohad();
         const uusLaud = sooritaKäik([this.valitudNupp, sihtKohaKoordinaadid], this.gameField);
+        this.aktiivneMängija = "must";
         this.gameField = uusLaud;
       }
-    }
+    },
 
+    sooritaAiKäik(){
+      const käik = rumalAi(this.aktiivneMängija, this.gameField);
+      setTimeout(() => {
+        let asukoht = käik[0];
+        for (let i = 0; i < käik[1].length; i++) {
+          const uusLaud = sooritaKäik([asukoht, käik[1][i]], this.gameField);
+          asukoht = käik[1][i];
+          this.gameField = uusLaud;
+        }
+        this.aktiivneMängija = this.aktiivneMängija === "valge" ? "must" : "valge";
+        }, 3000);
+    }
+  },
+
+  watch: {
+    aktiivneMängija() {
+      //if (this.aktiivneMängija === "must")
+        this.sooritaAiKäik();
+    }
   },
 
   computed: {
