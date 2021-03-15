@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df6be39b-cd34-43d9-a333-a7bdc2c9d961" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scripts/hinda.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/hindaMänguLaud.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/KabeLaud.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeLaud.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/KabeNupp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeNupp.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/unit/erinevadLauaSeisud.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/erinevadLauaSeisud.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,6 +176,7 @@
       <workItem from="1615401792682" duration="4097000" />
       <workItem from="1615743894058" duration="653000" />
       <workItem from="1615750482945" duration="8682000" />
+      <workItem from="1615832453695" duration="190000" />
     </task>
     <servers />
   </component>
