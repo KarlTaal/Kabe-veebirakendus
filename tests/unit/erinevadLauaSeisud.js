@@ -225,7 +225,7 @@ const ErinevadLauaSeisud = () => {
             [null, null, null, null, null, null, null, null],
             [null, null, {player:"valge", powerful: true}, null, null, null, {player:"valge", powerful: true}, null],
             [null, {player:"must", powerful: true}, null, null, null, null, null, null],
-            [null, null, {player:"valge", powerful: true, tüüp: "nupp"}, null, {player:"valge", powerful: true}, null, {player:"valge", powerful: true}, null],
+            [null, null, {player:"valge", powerful: true}, null, {player:"valge", powerful: true}, null, {player:"valge", powerful: true}, null],
             [null, null, null, null, null, null, null, null],
             [null, null, {player:"valge", powerful: true}, null, {player:"valge", powerful: true}, null, {player:"valge", powerful: true}, null],
             [null, null, null, null, null, null, null, null],
