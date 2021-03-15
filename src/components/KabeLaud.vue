@@ -7,7 +7,7 @@
           :key="i"
           style="display: flex;  align-items:center; justify-content: flex-end; margin-right: 5px; width: 6em; height: 6em;"
       >
-        {{i-1}}
+        {{ i - 1 }}
       </div>
     </div>
 
@@ -17,7 +17,7 @@
           :key="i"
           style="display: flex; justify-content: center"
       >
-        {{i-1}}
+        {{ i - 1 }}
       </div>
 
 
@@ -29,13 +29,14 @@
           @click="handleRuuduKlikk(ruut !== null && ruut.tüüp === 'sihtkoht', ruut.cords)"
       >
 
-      <kabe-nupp
-      v-if="ruut !== null && ruut.tüüp === 'nupp'"
-      :player="ruut.player"
-      :powerful="ruut.powerful"
-      :position="ruut.cords"
-      @nupuKlikk="handleNupuKlikk"
-      />
+        <kabe-nupp
+            v-if="ruut !== null && ruut.tüüp === 'nupp'"
+            :player="ruut.player"
+            :powerful="ruut.powerful"
+            :position="ruut.cords"
+            :klikitav="ruut.player === kasutaja"
+            @nupuKlikk="handleNupuKlikk"
+        />
 
       </div>
     </div>
@@ -57,28 +58,24 @@ export default {
   components: {KabeNupp},
   data() {
     return {
-      gameField: ErinevadLauaSeisud().tammiSöömisedKeerulineMust,
-      valitudNupp: null
-    }
-  },
-
-  computed: {
-    gameSquares() {
-      const squares = [];
-      for (let i = 0; i < 8; i++) {
-        for (let j = 0; j < 8; j++) {
-          const ruut = this.gameField[i][j];
-          if (ruut !== null && ruut.tüüp === "nupp") {
-            ruut["cords"] = [i,j];
-          }
-          squares.push(ruut);
-        }
-      }
-      return squares;
+      gameField: [[]],
+      valitudNupp: null,
+      kasutaja: "valge"
     }
   },
 
   methods: {
+    algSeadistaLaud(){
+      const uusLaud = ErinevadLauaSeisud().tammiSöömisedKeerulineValge;
+      for (let i = 0; i < 8; i++) {
+        for (let j = 0; j < 8; j++) {
+          if (uusLaud[i][j]) //ehk ei ole null
+            uusLaud[i][j]["tüüp"] = "nupp"
+        }
+      }
+      this.gameField = uusLaud;
+    },
+
     isEvenRow(index) {
       if (index < 8)
         return true;
@@ -97,9 +94,9 @@ export default {
       return false;
     },
 
-    eemaldaSihtkohad(){
+    eemaldaSihtkohad() {
       for (let i = 0; i < 8; i++) {
-        for (let j = 0; j <8; j++) {
+        for (let j = 0; j < 8; j++) {
           if (this.gameField[i][j] !== null && this.gameField[i][j].tüüp === "sihtkoht")
             this.gameField[i][j] = null;
         }
@@ -132,15 +129,34 @@ export default {
     },
 
     handleRuuduKlikk(kasOnSihtkoht, sihtKohaKoordinaadid) {
-      if (kasOnSihtkoht){
+      if (kasOnSihtkoht) {
         this.eemaldaSihtkohad();
-        console.log("SooritaKäigus on kuskil mingi viga?!?!?!?!?!?!?!?!?!?!?!?!?!")
-        const uusLaud = sooritaKäik([this.valitudNupp, [sihtKohaKoordinaadid]], this.gameField);
+        const uusLaud = sooritaKäik([this.valitudNupp, sihtKohaKoordinaadid], this.gameField);
         this.gameField = uusLaud;
       }
     }
 
-  }
+  },
+
+  computed: {
+    gameSquares() {
+      const squares = [];
+      for (let i = 0; i < this.gameField.length; i++) {
+        for (let j = 0; j < this.gameField[0].length; j++) {
+          const ruut = this.gameField[i][j];
+          if (ruut !== null && ruut.tüüp === "nupp") {
+            ruut["cords"] = [i, j];
+          }
+          squares.push(ruut);
+        }
+      }
+      return squares;
+    }
+  },
+
+  mounted() {
+    this.algSeadistaLaud();
+  },
 
 }
 

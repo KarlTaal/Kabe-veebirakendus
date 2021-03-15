@@ -364,6 +364,28 @@ const ErinevadLauaSeisud = () => {
             [null, null, null, null, null, null, null, null]
         ],
 
+        tammiJaTavanupudValge: [
+            [null, null, null, null, null, null, null, {player:"valge", powerful: true}],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [{player:"valge", powerful: false}, null, null, null, null, null, null, null],
+            [null, {player:"valge", powerful: false}, null, null, null, null, null, null],
+            [null, null, null, null, null, null, {player:"must", powerful: false}, null],
+            [null, {player:"must", powerful: false}, null, null, null, null, null, {player:"valge", powerful: false}],
+            [null, null, null, null, null, null, {player:"valge", powerful: true}, null]
+        ],
+
+        tammiJaTavanupudMust: [
+            [null, null, null, null, null, null, null, {player:"must", powerful: true}],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [{player:"must", powerful: false}, null, null, null, null, null, null, null],
+            [null, {player:"valge", powerful: false}, null, null, null, null, null, null],
+            [null, null, null, null, null, null, {player:"valge", powerful: false}, null],
+            [null, {player:"valge", powerful: false}, null, null, null, null, null, {player:"must", powerful: false}],
+            [null, null, null, null, null, null, {player:"must", powerful: true}, null]
+        ],
+
         tammiKõikKäigudMust: [
             [null, null, null, null, null, null, null, {player:"must", powerful: true}],
             [null, null, null, null, null, null, {player:"valge", powerful: false}, null],
@@ -385,8 +407,6 @@ const ErinevadLauaSeisud = () => {
             [null, {player:"must", powerful: false}, null, null, null, null, null, null],
             [{player:"valge", powerful: true}, null, null, null, null, null, null, null]
         ],
-
-
 
     }
 };

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df6be39b-cd34-43d9-a333-a7bdc2c9d961" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/scripts/hinda.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/hindaMänguLaud.spec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/KabeLaud.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeLaud.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/KabeNupp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeNupp.vue" afterDir="false" />
@@ -66,17 +68,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Jest.Testid kõikide ühe tüübi nuppude käikude saamiseks(Tammid).Tammi kõik käigud must">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Mängu lõpu kontroll" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -250,8 +241,8 @@
     <state width="1819" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
     <state width="1877" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
-    <state width="1877" height="253" key="GridCell.Tab.0.center" timestamp="1615758594639">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="255" key="GridCell.Tab.0.center" timestamp="1615574568625">
+      <screen x="0" y="-1080" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
     <state width="1001" height="441" key="GridCell.Tab.0.center/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
@@ -259,21 +250,19 @@
     <state width="1819" height="309" key="GridCell.Tab.0.center/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
     <state width="1877" height="371" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
-    <state width="1877" height="253" key="GridCell.Tab.0.left" timestamp="1615758594639">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="255" key="GridCell.Tab.0.left" timestamp="1615574568625">
+      <screen x="0" y="-1080" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
-    <state width="1001" height="441" key="GridCell.Tab.0.left/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
-    <state width="1877" height="254" key="GridCell.Tab.0.left/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615654818603" />
+    <state width="1877" height="255" key="GridCell.Tab.0.left/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615574568625" />
     <state width="1819" height="309" key="GridCell.Tab.0.left/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
     <state width="1877" height="371" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
-    <state width="1877" height="253" key="GridCell.Tab.0.right" timestamp="1615758594639">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1877" height="255" key="GridCell.Tab.0.right" timestamp="1615574568625">
+      <screen x="0" y="-1080" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
-    <state width="1001" height="441" key="GridCell.Tab.0.right/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615405648869" />
-    <state width="1877" height="254" key="GridCell.Tab.0.right/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615654818603" />
+    <state width="1877" height="255" key="GridCell.Tab.0.right/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615574568625" />
     <state width="1819" height="309" key="GridCell.Tab.0.right/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
     <state width="1877" height="371" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
@@ -293,6 +282,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1050@0.0.1920.1050" timestamp="1613758775515" />
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1615831488456">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="92" y="92" width="1736" height="866" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615831488456" />
     <state x="1499" y="-1080" width="428" height="1057" key="dock-window-1" timestamp="1615229614455">
       <screen x="0" y="-1080" width="1920" height="1050" />
     </state>

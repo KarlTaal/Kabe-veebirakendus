@@ -28,12 +28,17 @@ export default {
     position: {
       default: null,
       type: Array
+    },
+    klikitav: {
+      default: false,
+      type: Boolean
     }
   },
 
   methods: {
     handleKabenupuKlikk() {
-      this.$emit("nupuKlikk", this.position)
+      if (this.klikitav)
+        this.$emit("nupuKlikk", this.position)
     }
   }
 }
