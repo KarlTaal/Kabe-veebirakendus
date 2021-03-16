@@ -41,6 +41,8 @@
       </div>
     </div>
 
+    <button class="button" @click="sooritaAiKäik()">  </button>
+
   </div>
 </template>
 
@@ -70,7 +72,7 @@ export default {
 
   methods: {
     algSeadistaLaud(){
-      const uusLaud = getInitialGameField();//ErinevadLauaSeisud().tammiSöömisedKeerulineValge;
+      const uusLaud = getInitialGameField(); //ErinevadLauaSeisud().tavaNupuTavaKäigudValge;
       for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j++) {
           if (uusLaud[i][j]) //ehk ei ole null
@@ -151,7 +153,7 @@ export default {
           this.gameField = uusLaud;
         }
         this.aktiivneMängija = this.aktiivneMängija === "valge" ? "must" : "valge";
-        }, 3000);
+        }, 500);
     }
   },
 
@@ -225,6 +227,15 @@ export default {
 .sihtkoht {
   background-color: red;
 }
+
+.button{
+  height: 50px;
+  width: 50px;
+  padding-left: 50px;
+  margin-left: 50px;
+  background-color: #0074D9;
+}
+
 
 
 </style>
