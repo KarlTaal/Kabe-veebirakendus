@@ -55,6 +55,7 @@ import ErinevadLauaSeisud from "../../tests/unit/erinevadLauaSeisud";
 import rumalAi from "@/AI/rumalAI";
 import getInitialGameField from "@/scripts/data";
 import annaRumalAiVol2Käik from "@/AI/targemAI";
+import annaAiKäik from "@/AI/targemAI";
 
 
 export default {
@@ -146,7 +147,7 @@ export default {
     sooritaAiKäik(){
       let käik;
       if (this.aktiivneMängija === "valge") {
-        käik = annaRumalAiVol2Käik(this.aktiivneMängija, this.gameField);
+        käik = annaAiKäik(this.aktiivneMängija, this.gameField, 4, [], this.aktiivneMängija).tee[0];
       }else
         käik = rumalAi(this.aktiivneMängija, this.gameField);
 
@@ -158,7 +159,7 @@ export default {
           this.gameField = uusLaud;
         }
         this.aktiivneMängija = this.aktiivneMängija === "valge" ? "must" : "valge";
-        }, 2000);
+        }, 3000);
     }
   },
 
