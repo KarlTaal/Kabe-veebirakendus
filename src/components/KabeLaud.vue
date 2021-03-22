@@ -4,7 +4,7 @@
     <div style="display: flex; flex-direction: column; align-items: center;">
       <div
           v-for="i in 8"
-          :key="i"
+          :key="0"
           style="display: flex;  align-items:center; justify-content: flex-end; margin-right: 5px; width: 6em; height: 6em;"
       >
         {{ i - 1 }}
@@ -14,7 +14,7 @@
     <div class="field">
       <div
           v-for="i in 8"
-          :key="i"
+          :key="-1"
           style="display: flex; justify-content: center"
       >
         {{ i - 1 }}
@@ -54,7 +54,7 @@ import "@/scripts/data";
 import ErinevadLauaSeisud from "../../tests/unit/erinevadLauaSeisud";
 import rumalAi from "@/AI/rumalAI";
 import getInitialGameField from "@/scripts/data";
-
+import annaRumalAiVol2Käik from "@/AI/targemAI";
 
 
 export default {
@@ -144,7 +144,12 @@ export default {
     },
 
     sooritaAiKäik(){
-      const käik = rumalAi(this.aktiivneMängija, this.gameField);
+      let käik;
+      if (this.aktiivneMängija === "valge") {
+        käik = annaRumalAiVol2Käik(this.aktiivneMängija, this.gameField);
+      }else
+        käik = rumalAi(this.aktiivneMängija, this.gameField);
+
       setTimeout(() => {
         let asukoht = käik[0];
         for (let i = 0; i < käik[1].length; i++) {
@@ -153,7 +158,7 @@ export default {
           this.gameField = uusLaud;
         }
         this.aktiivneMängija = this.aktiivneMängija === "valge" ? "must" : "valge";
-        }, 500);
+        }, 2000);
     }
   },
 

@@ -7,6 +7,7 @@ const sooritaKäik = (käik, mänguväljak) => {
   const lõpuRida = käik[1][0];
   const lõpuTulp = käik[1][1];
 
+
   if (kasToimusSöömine(käik)) {
     //Sõi ülesse paremale
     if (lõpuRida - algusRida < 0 && lõpuTulp - algusTulp > 0) {
