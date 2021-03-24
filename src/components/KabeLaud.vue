@@ -54,7 +54,6 @@ import "@/scripts/data";
 import ErinevadLauaSeisud from "../../tests/unit/erinevadLauaSeisud";
 import rumalAi from "@/AI/rumalAI";
 import getInitialGameField from "@/scripts/data";
-import annaRumalAiVol2Käik from "@/AI/targemAI";
 import annaAiKäik from "@/AI/targemAI";
 
 
@@ -71,7 +70,9 @@ export default {
     }
   },
 
+
   methods: {
+
     algSeadistaLaud(){
       const uusLaud = getInitialGameField(); //ErinevadLauaSeisud().tavaNupuTavaKäigudValge;
       for (let i = 0; i < 8; i++) {
@@ -144,22 +145,28 @@ export default {
       }
     },
 
-    sooritaAiKäik(){
+    sleep(ms){
+      return new Promise(resolve => setTimeout(resolve, ms));
+    },
+
+     sooritaAiKäik() {
       let käik;
       if (this.aktiivneMängija === "valge") {
         käik = annaAiKäik(this.aktiivneMängija, this.gameField, 4, [], this.aktiivneMängija).tee[0];
       }else
         käik = rumalAi(this.aktiivneMängija, this.gameField);
 
-      setTimeout(() => {
+
+      setTimeout(async () => {
         let asukoht = käik[0];
         for (let i = 0; i < käik[1].length; i++) {
+          await this.sleep(500);
           const uusLaud = sooritaKäik([asukoht, käik[1][i]], this.gameField);
           asukoht = käik[1][i];
           this.gameField = uusLaud;
         }
         this.aktiivneMängija = this.aktiivneMängija === "valge" ? "must" : "valge";
-        }, 3000);
+        }, 500);
     }
   },
 

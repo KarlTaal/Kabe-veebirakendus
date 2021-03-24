@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="df6be39b-cd34-43d9-a333-a7bdc2c9d961" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/AI/targemAI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AI/targemAI.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/KabeLaud.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeLaud.vue" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/components/KabeLaud.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KabeLaud.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/annaKõikKäigud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/annaKõikKäigud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaKõikKäigud.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/KabeLoogika/annaKõikKäigud.spec.js" afterDir="false" />
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +70,11 @@
       <recent name="C:\Users\Kaur Taal\Documents\Isiklik\Kabe-veebirakendus\tests\unit\KabeLoogika" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Node.js.targemAI.js">
+=======
+  <component name="RunManager" selected="Jest.Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud ilma söömiseta valge">
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -75,6 +85,10 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+<<<<<<< HEAD
+    </configuration>
+    <configuration name="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+=======
     </configuration>
     <configuration name="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
@@ -90,6 +104,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud ilma söömiseta must" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
@@ -99,11 +114,18 @@
       <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaKõikKäigud.spec.js" />
       <test-names>
         <test-name value="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud)" />
+<<<<<<< HEAD
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud ilma söömiseta must" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+=======
         <test-name value="Tava kõik käigud ilma söömiseta must" />
       </test-names>
       <method v="2" />
     </configuration>
     <configuration name="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud ilma söömiseta valge" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
@@ -113,11 +135,19 @@
       <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaKõikKäigud.spec.js" />
       <test-names>
         <test-name value="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud)" />
+<<<<<<< HEAD
+        <test-name value="Tava kõik käigud ilma söömiseta must" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud ilma söömiseta valge" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+=======
         <test-name value="Tava kõik käigud ilma söömiseta valge" />
       </test-names>
       <method v="2" />
     </configuration>
     <configuration name="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud must" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
@@ -127,7 +157,33 @@
       <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaKõikKäigud.spec.js" />
       <test-names>
         <test-name value="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud)" />
+<<<<<<< HEAD
+        <test-name value="Tava kõik käigud ilma söömiseta valge" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud must" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+=======
         <test-name value="Tava kõik käigud must" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud valge" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/@vue/cli-service" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/unit/KabeLoogika/annaKõikKäigud.spec.js" />
+      <test-names>
+        <test-name value="Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud)" />
+<<<<<<< HEAD
+        <test-name value="Tava kõik käigud must" />
+=======
+        <test-name value="Tava kõik käigud valge" />
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
       </test-names>
       <method v="2" />
     </configuration>
@@ -136,11 +192,18 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Node.js.targemAI.js" />
+=======
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
         <item itemvalue="Jest.Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud ilma söömiseta valge" />
         <item itemvalue="Jest.Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud ilma söömiseta must" />
         <item itemvalue="Jest.Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud)" />
         <item itemvalue="Jest.Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud must" />
+<<<<<<< HEAD
+=======
+        <item itemvalue="Jest.Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupud).Tava kõik käigud valge" />
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
       </list>
     </recent_temporary>
   </component>
@@ -182,11 +245,15 @@
       <workItem from="1615750482945" duration="8682000" />
       <workItem from="1615832453695" duration="881000" />
       <workItem from="1615888958142" duration="31000" />
+<<<<<<< HEAD
       <workItem from="1615918894028" duration="4218000" />
       <workItem from="1616002123055" duration="14000" />
       <workItem from="1616439145805" duration="5585000" />
       <workItem from="1616446104571" duration="5000" />
       <workItem from="1616447939943" duration="3632000" />
+=======
+      <workItem from="1615918894028" duration="3652000" />
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
     </task>
     <servers />
   </component>
@@ -239,14 +306,23 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1170" y="275" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1613779210123" />
+<<<<<<< HEAD
     <state x="3140" y="242" key="FileChooserDialogImpl" timestamp="1616002135543">
       <screen x="1920" y="0" width="1920" height="1050" />
+=======
+    <state x="1220" y="-838" key="FileChooserDialogImpl" timestamp="1615888981802">
+      <screen x="0" y="-1080" width="1920" height="1050" />
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
     </state>
     <state x="1220" y="-838" key="FileChooserDialogImpl/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615888981802" />
     <state x="1220" y="242" key="FileChooserDialogImpl/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615303974294" />
     <state x="3140" y="242" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1616002135543" />
     <state x="1220" y="242" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1615125318636" />
+<<<<<<< HEAD
     <state width="1877" height="190" key="GridCell.Tab.0.bottom" timestamp="1616444764183">
+=======
+    <state width="1877" height="190" key="GridCell.Tab.0.bottom" timestamp="1615921249209">
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673023" />
@@ -254,9 +330,15 @@
     <state width="1877" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615654818604" />
     <state width="1819" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
+<<<<<<< HEAD
     <state width="1877" height="190" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1616444764183" />
     <state width="1877" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
     <state width="1877" height="190" key="GridCell.Tab.0.center" timestamp="1616444764183">
+=======
+    <state width="1877" height="190" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615921249209" />
+    <state width="1877" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
+    <state width="1877" height="190" key="GridCell.Tab.0.center" timestamp="1615921249209">
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
@@ -264,24 +346,37 @@
     <state width="1877" height="254" key="GridCell.Tab.0.center/0.0.1920.1050/0.-1080.1920.1050@0.0.1920.1050" timestamp="1615654818603" />
     <state width="1819" height="309" key="GridCell.Tab.0.center/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="253" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
+<<<<<<< HEAD
     <state width="1877" height="190" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1616444764183" />
     <state width="1877" height="371" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
     <state width="1877" height="190" key="GridCell.Tab.0.left" timestamp="1616444764183">
+=======
+    <state width="1877" height="190" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615921249209" />
+    <state width="1877" height="371" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
+    <state width="1877" height="190" key="GridCell.Tab.0.left" timestamp="1615921249209">
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
     <state width="1877" height="255" key="GridCell.Tab.0.left/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615574568625" />
     <state width="1819" height="309" key="GridCell.Tab.0.left/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="253" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
+<<<<<<< HEAD
     <state width="1877" height="190" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1616444764183" />
     <state width="1877" height="371" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
     <state width="1877" height="190" key="GridCell.Tab.0.right" timestamp="1616444764183">
+=======
+    <state width="1877" height="190" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615921249209" />
+    <state width="1877" height="371" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
+    <state width="1877" height="190" key="GridCell.Tab.0.right" timestamp="1615921249209">
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="1805" height="309" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.-73.1920.1050@0.0.1920.1050" timestamp="1615145673012" />
     <state width="1877" height="255" key="GridCell.Tab.0.right/0.0.1920.1050/0.-1080.1920.1050@0.-1080.1920.1050" timestamp="1615574568625" />
     <state width="1819" height="309" key="GridCell.Tab.0.right/0.0.1920.1050/11.-1080.1920.1050@0.0.1920.1050" timestamp="1615146983683" />
     <state width="1877" height="253" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1615758594639" />
+<<<<<<< HEAD
     <state width="1877" height="190" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1616444764183" />
     <state width="1877" height="371" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
     <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1615923149106">
@@ -332,6 +427,58 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="352" key="GridCell.Tab.3.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615923149107" />
+=======
+    <state width="1877" height="190" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615921249209" />
+    <state width="1877" height="371" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1615133576049" />
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+    <state width="1877" height="352" key="GridCell.Tab.1.center" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+    <state width="1877" height="352" key="GridCell.Tab.1.left" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+    <state width="1877" height="352" key="GridCell.Tab.1.right" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.1.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+    <state width="1877" height="352" key="GridCell.Tab.2.bottom" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+    <state width="1877" height="352" key="GridCell.Tab.2.center" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+    <state width="1877" height="352" key="GridCell.Tab.2.left" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+    <state width="1877" height="352" key="GridCell.Tab.2.right" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+    <state width="1877" height="352" key="GridCell.Tab.3.bottom" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.3.bottom/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+    <state width="1877" height="352" key="GridCell.Tab.3.center" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.3.center/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+    <state width="1877" height="352" key="GridCell.Tab.3.left" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.3.left/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+    <state width="1877" height="352" key="GridCell.Tab.3.right" timestamp="1615920074465">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.3.right/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1615920074465" />
+>>>>>>> ffad524916b4f698df785caf22bbc59834c63a7c
     <state x="225" y="18" key="MergeDialog" timestamp="1615125284405">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
