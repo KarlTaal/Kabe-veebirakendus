@@ -1,16 +1,21 @@
 <template>
   <div class="konteiner">
+    <Header></Header>
     <kabe-laud/>
+    <Footer></Footer>
+
   </div>
 </template>
 
 <script>
 import KabeLaud from "@/components/KabeLaud";
 import KabeNupp from "@/components/KabeNupp";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 
 export default {
   name: "kabe",
-  components: {KabeNupp, KabeLaud},
+  components: {Header, KabeNupp, KabeLaud, Footer},
 }
 
 </script>
