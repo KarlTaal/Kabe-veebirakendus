@@ -4,7 +4,7 @@
     <div style="display: flex; flex-direction: column; align-items: center;">
       <div
           v-for="i in 8"
-          :key="i"
+          :key="0"
           style="display: flex;  align-items:center; justify-content: flex-end; margin-right: 5px; width: 6em; height: 6em;"
       >
         {{ i - 1 }}
@@ -14,7 +14,7 @@
     <div class="field">
       <div
           v-for="i in 8"
-          :key="i"
+          :key="-1"
           style="display: flex; justify-content: center"
       >
         {{ i - 1 }}
@@ -54,7 +54,7 @@ import "@/scripts/data";
 import ErinevadLauaSeisud from "../../tests/unit/erinevadLauaSeisud";
 import rumalAi from "@/AI/rumalAI";
 import getInitialGameField from "@/scripts/data";
-
+import annaAiKäik from "@/AI/targemAI";
 
 
 export default {
@@ -70,7 +70,9 @@ export default {
     }
   },
 
+
   methods: {
+
     algSeadistaLaud(){
       const uusLaud = getInitialGameField(); //ErinevadLauaSeisud().tavaNupuTavaKäigudValge;
       for (let i = 0; i < 8; i++) {
@@ -143,11 +145,22 @@ export default {
       }
     },
 
-    sooritaAiKäik(){
-      const käik = rumalAi(this.aktiivneMängija, this.gameField);
-      setTimeout(() => {
+    sleep(ms){
+      return new Promise(resolve => setTimeout(resolve, ms));
+    },
+
+     sooritaAiKäik() {
+      let käik;
+      if (this.aktiivneMängija === "valge") {
+        käik = annaAiKäik(this.aktiivneMängija, this.gameField, 4, [], this.aktiivneMängija).tee[0];
+      }else
+        käik = rumalAi(this.aktiivneMängija, this.gameField);
+
+
+      setTimeout(async () => {
         let asukoht = käik[0];
         for (let i = 0; i < käik[1].length; i++) {
+          await this.sleep(500);
           const uusLaud = sooritaKäik([asukoht, käik[1][i]], this.gameField);
           asukoht = käik[1][i];
           this.gameField = uusLaud;
