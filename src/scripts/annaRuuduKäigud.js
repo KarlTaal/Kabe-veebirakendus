@@ -1,7 +1,7 @@
 import sooritaKäik from "@/scripts/sooritaKäik";
 
 
-const annaRuuduKäigud = (ruut, mänguväljak) => {
+export const annaRuuduKäigud = (ruut, mänguväljak) => {
   const kasOnTamm = mänguväljak[ruut[0]][ruut[1]].powerful;
   const söömised = annaSöömised(ruut, mänguväljak);
 
@@ -545,7 +545,7 @@ const tavaParemaleSöömised = (ruut, mänguväljak) => {
   }
 }
 
-const kasSaabKäia = (ruut, mänguväljak) => {
+export const kasSaabKäia = (ruut, mänguväljak) => {
   const nupp = mänguväljak[ruut[0]][ruut[1]].player;
 
   if (nupp === "must") {
@@ -583,5 +583,5 @@ const kasSaabKäia = (ruut, mänguväljak) => {
   }
 }
 
+export default {annaRuuduKäigud, kasSaabKäia}
 
-export default annaRuuduKäigud;

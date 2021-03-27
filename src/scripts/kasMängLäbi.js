@@ -1,19 +1,22 @@
+import {kasSaabKäia} from "@/scripts/annaRuuduKäigud";
 
-const kasLõpp = (mänguLaud)=> {
-
+const kasLõpp = (mänguLaud) => {
   let musti = 0;
   let valgeid = 0;
 
-  mänguLaud.forEach(rida =>{
-    rida.forEach(ruut =>{
-      if (ruut !== null) {
-        if (ruut.player === "must")
+
+  for (let i = 0; i < mänguLaud.length; i++) {
+    for (let j = 0; j < mänguLaud[0].length; j++) {
+      if (mänguLaud[i][j] !== null) {
+        if (mänguLaud[i][j].player === "must" && kasSaabKäia([i, j], mänguLaud)) {
           musti++;
-        if (ruut.player === "valge")
+        }
+        if (mänguLaud[i][j].player === "valge" && kasSaabKäia([i, j], mänguLaud)) {
           valgeid++;
+        }
       }
-    })
-  })
+    }
+  }
 
   if (musti === 0 && valgeid !== 0)
     return "valge"

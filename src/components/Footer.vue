@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
-    <v-container>
+    <div>
       Olen Footer ja ei oska midagi tarka öelda
-    </v-container>
+    </div>
   </div>
 </template>
 

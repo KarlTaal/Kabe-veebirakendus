@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <v-container>
+    <div>
         Olen Header ja ei oska midagi tarka öelda
-    </v-container>
+    </div>
   </div>
 </template>
 

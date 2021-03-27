@@ -1,4 +1,4 @@
-import annaRuuduKäigud from "@/scripts/annaRuuduKäigud";
+import {annaRuuduKäigud} from "@/scripts/annaRuuduKäigud";
 
 
 const annaKõikKäigud = (mängija, mängulaud) => {
