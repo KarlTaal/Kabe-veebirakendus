@@ -1,5 +1,5 @@
 import ErinevadLauaSeisud from "../erinevadLauaSeisud";
-import annaRuuduKäigud from "@/scripts/annaRuuduKäigud";
+import {annaRuuduKäigud} from "@/scripts/annaRuuduKäigud";
 
 
 ////////////////////////////////////////////   TAVA NUPU TESTID
