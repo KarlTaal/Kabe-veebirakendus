@@ -9,6 +9,7 @@
           :class="player === 'must' ? 'tammi-ikoon-must' : 'tammi-ikoon-valge'"
           v-show="powerful"
       ></i>
+
     </div>
 </template>
 

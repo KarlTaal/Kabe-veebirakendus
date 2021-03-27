@@ -4,7 +4,7 @@
     <div style="display: flex; flex-direction: column; align-items: center;">
       <div
           v-for="i in 8"
-          :key="0"
+          :key="`${i}error`"
           style="display: flex;  align-items:center; justify-content: flex-end; margin-right: 5px; width: 6em; height: 6em;"
       >
         {{ i - 1 }}
@@ -14,7 +14,7 @@
     <div class="field">
       <div
           v-for="i in 8"
-          :key="-1"
+          :key="`${i}minema`"
           style="display: flex; justify-content: center"
       >
         {{ i - 1 }}
@@ -24,7 +24,7 @@
       <div
           v-for="(ruut, index) in gameSquares"
           :key="index"
-          :class="[getSquareColorClass(index), ruut !== null && ruut.tüüp === 'sihtkoht' ? 'sihtkoht' : '']"
+          :class="[getSquareColorClass(index), ruut !== null && ruut.tüüp === 'sihtkoht' ? 'sihtkoht' : '' ]"
           :style="index > 55 ? 'border-bottom: solid' : ''"
           @click="handleRuuduKlikk(ruut !== null && ruut.tüüp === 'sihtkoht', ruut.cords)"
       >
@@ -35,26 +35,28 @@
             :powerful="ruut.powerful"
             :position="ruut.cords"
             :klikitav="ruut.player === kasutaja"
+            :class="aktiivneMängija === 'valge' && ruut.indikaator && ruut.player === 'valge' ? 'käija' : ''"
             @nupuKlikk="handleNupuKlikk"
         />
 
       </div>
     </div>
 
-    <button class="button" @click="sooritaAiKäik()">  </button>
+    <button class="button" @click="sooritaAiKäik()"></button>
 
   </div>
 </template>
 
 <script>
 import sooritaKäik from "@/scripts/sooritaKäik";
-import annaRuuduKäigud from "@/scripts/annaRuuduKäigud";
+import {annaRuuduKäigud, kasSaabKäia} from "@/scripts/annaRuuduKäigud"
 import KabeNupp from "@/components/KabeNupp";
 import "@/scripts/data";
 import ErinevadLauaSeisud from "../../tests/unit/erinevadLauaSeisud";
 import rumalAi from "@/AI/rumalAI";
 import getInitialGameField from "@/scripts/data";
 import annaAiKäik from "@/AI/targemAI";
+import kasLõpp from "@/scripts/kasMängLäbi";
 
 
 export default {
@@ -73,7 +75,7 @@ export default {
 
   methods: {
 
-    algSeadistaLaud(){
+    algSeadistaLaud() {
       const uusLaud = getInitialGameField(); //ErinevadLauaSeisud().tavaNupuTavaKäigudValge;
       for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j++) {
@@ -145,35 +147,43 @@ export default {
       }
     },
 
-    sleep(ms){
+    sleep(ms) {
       return new Promise(resolve => setTimeout(resolve, ms));
     },
 
-     sooritaAiKäik() {
+    async sooritaAiKäik() {
+      const kiirus = 2000;
+      const winner = kasLõpp(this.gameField);
+
+      if (winner){
+        console.log(`VÕITIS: ${winner}`)
+        return;
+      }
+
       let käik;
       if (this.aktiivneMängija === "valge") {
         käik = annaAiKäik(this.aktiivneMängija, this.gameField, 4, [], this.aktiivneMängija).tee[0];
-      }else
+      } else
         käik = rumalAi(this.aktiivneMängija, this.gameField);
 
 
-      setTimeout(async () => {
-        let asukoht = käik[0];
-        for (let i = 0; i < käik[1].length; i++) {
-          await this.sleep(500);
-          const uusLaud = sooritaKäik([asukoht, käik[1][i]], this.gameField);
-          asukoht = käik[1][i];
-          this.gameField = uusLaud;
-        }
-        this.aktiivneMängija = this.aktiivneMängija === "valge" ? "must" : "valge";
-        }, 500);
+      let asukoht = käik[0];
+      for (let i = 0; i < käik[1].length; i++) {
+        await this.sleep(kiirus);
+        const uusLaud = sooritaKäik([asukoht, käik[1][i]], this.gameField);
+        asukoht = käik[1][i];
+        this.gameField = uusLaud;
+      }
+      await this.sleep(kiirus)
+      this.aktiivneMängija = this.aktiivneMängija === "valge" ? "must" : "valge";
+
     }
   },
 
   watch: {
     aktiivneMängija() {
       //if (this.aktiivneMängija === "must")
-        this.sooritaAiKäik();
+      this.sooritaAiKäik();
     }
   },
 
@@ -183,6 +193,14 @@ export default {
       for (let i = 0; i < this.gameField.length; i++) {
         for (let j = 0; j < this.gameField[0].length; j++) {
           const ruut = this.gameField[i][j];
+
+          console.log(ruut);
+
+          if (ruut !== null && kasSaabKäia([i,j], this.gameField)) {
+            this.gameField[i][j]["indikaator"] = true;
+          }
+
+
           if (ruut !== null && ruut.tüüp === "nupp") {
             ruut["cords"] = [i, j];
           }
@@ -202,6 +220,28 @@ export default {
 </script>
 
 <style scoped>
+
+@-webkit-keyframes vaheta {
+  0% { background-color: hsl(103, 100%, 90%); }
+  25% {background-color: hsl(103, 97%, 73%);}
+  50% { background-color: hsl(103, 96%, 55%) }
+  75% { background-color: hsl(103, 97%, 73%); }
+  100% { background-color: hsl(103, 100%, 90%); }
+}
+
+.käija {
+  -webkit-animation-name: vaheta;
+  -webkit-animation-iteration-count: 2;
+  -webkit-animation-duration: 1s;
+}
+
+.indikaator{
+  border: green;
+  border: solid;
+  border-radius: 100%;
+}
+
+
 .konteiner {
   display: flex;
   flex-direction: column;
@@ -241,14 +281,13 @@ export default {
   background-color: red;
 }
 
-.button{
+.button {
   height: 50px;
   width: 50px;
   padding-left: 50px;
   margin-left: 50px;
   background-color: #0074D9;
 }
-
 
 
 </style>
