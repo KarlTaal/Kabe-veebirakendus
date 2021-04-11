@@ -42,8 +42,6 @@
       </div>
     </div>
 
-    <button class="button" @click="sooritaAiKäik()"></button>
-
   </div>
 </template>
 
@@ -57,12 +55,13 @@ import rumalAi from "@/AI/rumalAI";
 import getInitialGameField from "@/scripts/data";
 import annaAiKäik from "@/AI/targemAI";
 import kasLõpp from "@/scripts/kasMängLäbi";
+import LauaKontrollid from "@/components/LauaKontrollid";
 
 
 export default {
 
   name: "kabe-laud",
-  components: {KabeNupp},
+  components: {LauaKontrollid, KabeNupp},
   data() {
     return {
       gameField: [[]],
@@ -74,6 +73,18 @@ export default {
 
 
   methods: {
+
+    setDifficulty(difficulty){
+      this.aktiivneMängija = difficulty;
+    },
+
+    startGame(){
+      this.sooritaAiKäik();
+    },
+
+    endGame(){
+      location.reload();
+    },
 
     algSeadistaLaud() {
       const uusLaud = getInitialGameField(); //ErinevadLauaSeisud().tavaNupuTavaKäigudValge;
@@ -152,7 +163,7 @@ export default {
     },
 
     async sooritaAiKäik() {
-      const kiirus = 2000;
+      const kiirus = 500;
       const winner = kasLõpp(this.gameField);
 
       if (winner){
@@ -178,6 +189,7 @@ export default {
       this.aktiivneMängija = this.aktiivneMängija === "valge" ? "must" : "valge";
 
     }
+
   },
 
   watch: {
@@ -221,24 +233,8 @@ export default {
 
 <style scoped>
 
-@-webkit-keyframes vaheta {
-  0% { background-color: hsl(103, 100%, 90%); }
-  25% {background-color: hsl(103, 97%, 73%);}
-  50% { background-color: hsl(103, 96%, 55%) }
-  75% { background-color: hsl(103, 97%, 73%); }
-  100% { background-color: hsl(103, 100%, 90%); }
-}
-
-.käija {
-  -webkit-animation-name: vaheta;
-  -webkit-animation-iteration-count: 2;
-  -webkit-animation-duration: 1s;
-}
-
-.indikaator{
-  border: green;
-  border: solid;
-  border-radius: 100%;
+.käija:hover{
+  background-color: lime;
 }
 
 
@@ -286,7 +282,7 @@ export default {
   width: 50px;
   padding-left: 50px;
   margin-left: 50px;
-  background-color: #0074D9;
+  background-color: red;
 }
 
 
