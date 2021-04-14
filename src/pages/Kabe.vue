@@ -5,8 +5,8 @@
       <LauaKontrollid
           @start="handleStart"
           @end="handleEnd"
-          @player1="handleDifficulty"
-          @player2="handleDifficulty"
+          @player1="handleDifficultyPlayer1"
+          @player2="handleDifficultyPlayer2"
       ></LauaKontrollid>
       <kabe-laud ref="kabelaud"/>
     </div>
@@ -34,8 +34,11 @@ export default {
     handleEnd(){
       this.$refs.kabelaud.endGame()
     },
-    handleDifficulty(difficulty){
-      this.$refs.kabelaud.setDifficulty(difficulty)
+    handleDifficultyPlayer1(player1){
+      this.$refs.kabelaud.setDifficultyPlayer1(player1)
+    },
+    handleDifficultyPlayer2(player2){
+      this.$refs.kabelaud.setDifficultyPlayer2(player2)
     }
   }
 }

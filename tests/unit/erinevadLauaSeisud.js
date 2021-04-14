@@ -419,6 +419,17 @@ const ErinevadLauaSeisud = () => {
             [null, null, null, null, null, null, {player:"must", powerful: true}, null]
         ],
 
+        usersMultipleMoves: [
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, null, null, null, null, {player:"must", powerful: false}, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, {player:"must", powerful: false}, null, {player:"must", powerful: false}, null, null, null, null],
+            [null, null, null, null, null, null, null, null],
+            [null, {player:"must", powerful: false}, null, null, null, null, null, null],
+            [{player:"valge", powerful: false}, null, null, null, null, null, null, null]
+        ]
+
     }
 };
 

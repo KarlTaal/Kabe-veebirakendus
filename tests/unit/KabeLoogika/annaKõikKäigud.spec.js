@@ -23,7 +23,6 @@ describe("Testid kõikide ühe tüübi nuppude käikude saamiseks(tavalised nupu
   });
 });
 
-//TODO tammi testid
 describe("Testid kõikide ühe tüübi nuppude käikude saamiseks(Tammid)", () => {
   it("Tammi kõik käigud must", () => {
     const käigud = annaKõikKäigud("must", ErinevadLauaSeisud().tammiKõikKäigudMust);

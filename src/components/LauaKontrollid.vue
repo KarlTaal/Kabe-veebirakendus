@@ -1,6 +1,8 @@
 <template>
   <div class="valikud">
-    <el-select v-model="leftDrop">
+    <el-select
+        :disabled="gameActive"
+        v-model="leftDrop">
       <el-option
           v-for="item in options"
           :key="item.id"
@@ -16,10 +18,8 @@
     </el-button-group>
 
     <el-select
-        v-model="rightDrop"
-        collapse-tags
-        style="margin-left: 20px;"
-    >
+        :disabled="gameActive"
+        v-model="rightDrop">
       <el-option
           v-for="item in options"
           :key="item.id"
@@ -41,9 +41,9 @@ export default {
   data() {
     return {
 
+      gameActive: false,
       rightDrop: 0,
-
-      leftDrop: 1,
+      leftDrop: 3,
 
       options: [
         {
@@ -65,19 +65,21 @@ export default {
   },
   methods: {
     handleStart() {
+      this.gameActive = true;
       this.$emit("start")
     },
     handleEnd() {
+      this.gameActive = false;
       this.$emit("end")
     }
   },
 
   watch: {
     rightDrop(newVal) {
-      this.$emit("player1", newVal);
+      this.$emit("player2", newVal);
     },
     leftDrop(newVal){
-      this.$emit("Player2", newVal)
+      this.$emit("player1", newVal)
     }
   }
 }
