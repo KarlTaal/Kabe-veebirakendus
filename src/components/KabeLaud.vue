@@ -229,7 +229,6 @@ export default {
       await this.sleep(kiirus)
       this.aktiivneMängija = this.aktiivneMängija === "valge" ? "must" : "valge";
     }
-
   },
 
   watch: {
