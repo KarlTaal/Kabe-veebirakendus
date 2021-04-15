@@ -110,7 +110,7 @@ export default {
     },
 
     algSeadistaLaud() {
-      const uusLaud = getInitialGameField();// ErinevadLauaSeisud().usersMultipleMoves;
+      const uusLaud = getInitialGameField();//ErinevadLauaSeisud().isGameOverSpecial;//
       for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j++) {
           if (uusLaud[i][j]) //ehk ei ole null

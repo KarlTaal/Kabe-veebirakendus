@@ -11,10 +11,10 @@ const kasLõpp = (mänguLaud) => {
       const ruuduke = mänguLaud[i][j];
       if (ruuduke !== null) {
 
-        if (ruuduke.powerful && ruuduke.player === "valge")
+        if (ruuduke.powerful && ruuduke.player === "valge" && kasSaabKäia([i, j], mänguLaud))
           valgeid++;
 
-        if (ruuduke.powerful && ruuduke.player === "must")
+        if (ruuduke.powerful && ruuduke.player === "must" && kasSaabKäia([i, j], mänguLaud))
           musti++;
 
         if (ruuduke.player === "must" && kasSaabKäia([i, j], mänguLaud))
@@ -26,7 +26,6 @@ const kasLõpp = (mänguLaud) => {
       }
     }
   }
-  console.log(musti + "  " + valgeid)
 
   if (musti === 0 && valgeid !== 0)
     return "valge"

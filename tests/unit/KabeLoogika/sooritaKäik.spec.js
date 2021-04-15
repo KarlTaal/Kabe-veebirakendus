@@ -1,5 +1,5 @@
 import ErinevadLauaSeisud from "../erinevadLauaSeisud";
-import sooritaKäik from "@/scripts/sooritaKäik";
+import {sooritaKäik} from "@/scripts/sooritaKäik";
 
 
 ////////////////////////////////////////////   TAVA NUPU TESTID
