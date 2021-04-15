@@ -1,4 +1,4 @@
-const sooritaKäik = (käik, mänguväljak) => {
+export const sooritaKäik = (käik, mänguväljak) => {
   const koopia = JSON.parse(JSON.stringify(mänguväljak));
   const nupuVärv = koopia[käik[0][0]][käik[0][1]].player;
   const nupp = koopia[käik[0][0]][käik[0][1]];
@@ -57,7 +57,7 @@ const sooritaKäik = (käik, mänguväljak) => {
 }
 
 
-const kasToimusSöömine = (käik) => {
+export const kasToimusSöömine = (käik) => {
   const rida = käik[0][0];
   const lõpuRida = käik[1][0];
 
@@ -77,4 +77,4 @@ const kasMuutusTammiks = (käik, nupp) => {
 }
 
 
-export default sooritaKäik;
+export default {sooritaKäik, kasToimusSöömine}

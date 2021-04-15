@@ -2,15 +2,17 @@ import {annaRuuduKäigud} from "@/scripts/annaRuuduKäigud";
 
 
 const annaKõikKäigud = (mängija, mängulaud) => {
+  let koopia = JSON.parse(JSON.stringify(mängulaud));
+  koopia = removeDestinations(koopia);
   const söömised = [];
   const käigud = [];
   let kõikLiikumised;
   let käik;
 
-  for (let i = 0; i < mängulaud.length; i++) {
-    for (let j = 0; j < mängulaud[0].length; j++) {
-      if (mängulaud[i][j] !== null && mängulaud[i][j].player === mängija) {
-        kõikLiikumised = annaRuuduKäigud([i, j], mängulaud);
+  for (let i = 0; i < koopia.length; i++) {
+    for (let j = 0; j < koopia[0].length; j++) {
+      if (koopia[i][j] !== null && koopia[i][j].player === mängija) {
+        kõikLiikumised = annaRuuduKäigud([i, j], koopia);
 
         for (let k = 0; k < kõikLiikumised.length; k++) {
           käik = [[i, j]];
@@ -37,6 +39,18 @@ const kasToimusSöömine = (käik) => {
     return true;
   else
     return false;
+}
+
+const removeDestinations = (gameField) =>{
+  if (gameField.length > 0) {
+    for (let i = 0; i < gameField.length; i++) {
+      for (let j = 0; j < gameField[0].length; j++) {
+        if (gameField[i][j] !== null && gameField[i][j].tüüp === "sihtkoht")
+          gameField[i][j] = null;
+      }
+    }
+  }
+  return gameField;
 }
 
 

@@ -1,5 +1,5 @@
 import annaKõikKäigud from "@/scripts/annaKõikKäigud";
-import sooritaKäik from "@/scripts/sooritaKäik";
+import {sooritaKäik} from "@/scripts/sooritaKäik";
 import hinda from "@/scripts/hinda";
 
 const annaAiKäik = (mängija, mängulaud, sügavus, teekond, esialgneMängija) => {

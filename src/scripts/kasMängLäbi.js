@@ -1,5 +1,6 @@
 import {kasSaabKäia} from "@/scripts/annaRuuduKäigud";
 
+
 const kasLõpp = (mänguLaud) => {
   let musti = 0;
   let valgeid = 0;
@@ -7,13 +8,21 @@ const kasLõpp = (mänguLaud) => {
 
   for (let i = 0; i < mänguLaud.length; i++) {
     for (let j = 0; j < mänguLaud[0].length; j++) {
-      if (mänguLaud[i][j] !== null) {
-        if (mänguLaud[i][j].player === "must" && kasSaabKäia([i, j], mänguLaud)) {
-          musti++;
-        }
-        if (mänguLaud[i][j].player === "valge" && kasSaabKäia([i, j], mänguLaud)) {
+      const ruuduke = mänguLaud[i][j];
+      if (ruuduke !== null) {
+
+        if (ruuduke.powerful && ruuduke.player === "valge" && kasSaabKäia([i, j], mänguLaud))
           valgeid++;
-        }
+
+        if (ruuduke.powerful && ruuduke.player === "must" && kasSaabKäia([i, j], mänguLaud))
+          musti++;
+
+        if (ruuduke.player === "must" && kasSaabKäia([i, j], mänguLaud))
+          musti++;
+
+        if (ruuduke.player === "valge" && kasSaabKäia([i, j], mänguLaud))
+          valgeid++;
+
       }
     }
   }
