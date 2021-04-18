@@ -43,7 +43,7 @@ export default {
 
       gameActive: false,
       rightDrop: 0,
-      leftDrop: 3,
+      leftDrop: 1,
 
       options: [
         {
@@ -93,10 +93,6 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 4em;
-}
-
-.nupud{
-  padding-left: 20px;
 }
 
 .startNupp{

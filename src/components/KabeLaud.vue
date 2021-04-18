@@ -1,25 +1,16 @@
 <template>
-  <div class="konteiner" style="flex-direction: row">
+  <div class="konteiner">
 
-    <div style="display: flex; flex-direction: column; align-items: center;">
-      <div
-          v-for="i in 8"
-          :key="`${i}error`"
-          style="display: flex;  align-items:center; justify-content: flex-end; margin-right: 5px; width: 6em; height: 6em;"
-      >
-        {{ i - 1 }}
-      </div>
+    <div
+        style="text-align: center; font-size: 2em"
+    >
+      Seis
+      <br>
+      {{ `${valgeVõite} : ${mustaVõite}` }}
     </div>
 
-    <div class="field">
-      <div
-          v-for="i in 8"
-          :key="`${i}minema`"
-          style="display: flex; justify-content: center"
-      >
-        {{ i - 1 }}
-      </div>
 
+    <div class="field">
 
       <div
           v-for="(ruut, index) in gameSquares"
@@ -34,7 +25,7 @@
             :player="ruut.player"
             :powerful="ruut.powerful"
             :position="ruut.cords"
-            :klikitav="ruut.player === aktiivneMängija"
+            :klikitav="ruut.player === aktiivneMängija && (aktiivneMängija === 'valge' && player1Algo === 3 || aktiivneMängija === 'must' && player2Algo === 3)"
             :class="ruut.indikaator ? 'käija' : ''"
             @nupuKlikk="handleNupuKlikk(ruut)"
         />
@@ -69,18 +60,14 @@ export default {
       valitudNupp: null,
       player1: "valge",
       aktiivneMängija: "valge",
-      player1Algo: 3,
+      player1Algo: 1,
       player2Algo: 0,
+      valgeVõite: 0,
+      mustaVõite: 0,
+
+      gameActive: false
     }
   },
-
-  //Valge = player1
-  //Must = player2
-
-  //0 - Rumal Ai
-  //1 - Keskmine Ai
-  //2 - Master Ai
-  //3 - Inimene
 
   methods: {
 
@@ -93,7 +80,10 @@ export default {
     },
 
     startGame() {
-      if (this.player1Algo === 3 && this.player2Algo === 3){
+      this.algSeadistaLaud();
+      this.gameActive = true;
+      this.aktiivneMängija = "valge";
+      if (this.player1Algo === 3 && this.player2Algo === 3) {
         return;
       }
       if (this.player1Algo !== 3)
@@ -103,10 +93,11 @@ export default {
     endGame() {
       this.algSeadistaLaud();
       this.valitudNupp = null;
-      this.player1 = "valge";
       this.aktiivneMängija = "valge";
-      this.player1Algo = 3;
+      this.player1 = "valge";
+      this.player1Algo = 1;
       this.player2Algo = 0;
+      this.gameActive = false;
     },
 
     algSeadistaLaud() {
@@ -203,12 +194,17 @@ export default {
     },
 
     async sooritaAiKäik(algo) {
-      const kiirus = 500;
+      const kiirus = 100;
       const winner = kasLõpp(this.gameField);
 
       if (winner) {
+        if (winner === "must")
+          this.mustaVõite++;
+        else
+          this.valgeVõite++;
         console.log(`VÕITIS: ${winner}`)
-        return;
+        this.algSeadistaLaud();
+        this.sooritaAiKäik(this.player1Algo);
       }
 
       let käik;
@@ -216,15 +212,20 @@ export default {
         käik = rumalAi(this.aktiivneMängija, this.gameField);
       else if (algo === 1)
         käik = annaAiKäik(this.aktiivneMängija, this.gameField, 4, [], this.aktiivneMängija).tee[0];
+      else if (algo === 2)
+        console.log("Minimax");
       else
         return;
 
+
       let asukoht = käik[0];
       for (let i = 0; i < käik[1].length; i++) {
-        await this.sleep(kiirus);
+        await this.sleep(kiirus)
+        if (!this.gameActive) return;
         const uusLaud = sooritaKäik([asukoht, käik[1][i]], this.gameField);
         asukoht = käik[1][i];
         this.gameField = uusLaud;
+
       }
       await this.sleep(kiirus)
       this.aktiivneMängija = this.aktiivneMängija === "valge" ? "must" : "valge";
@@ -233,10 +234,12 @@ export default {
 
   watch: {
     aktiivneMängija() {
-      if (this.aktiivneMängija === "must" && this.player2Algo !== 3)
-        this.sooritaAiKäik(this.player2Algo);
-      else if (this.aktiivneMängija === "valge" && this.player2Algo !== 3)
-        this.sooritaAiKäik(this.player1Algo);
+      if (this.gameActive) {
+        if (this.aktiivneMängija === "must" && this.player2Algo !== 3)
+          this.sooritaAiKäik(this.player2Algo);
+        else if (this.aktiivneMängija === "valge" && this.player2Algo !== 3)
+          this.sooritaAiKäik(this.player1Algo);
+      }
     }
   },
 
@@ -291,6 +294,7 @@ export default {
 .field {
   display: grid;
   grid-template-columns: repeat(8, 6em);
+  justify-content: center;
 
 }
 
@@ -317,16 +321,7 @@ export default {
 }
 
 .sihtkoht {
-  background-color: red;
+  background-color: lightgreen;
 }
-
-.button {
-  height: 50px;
-  width: 50px;
-  padding-left: 50px;
-  margin-left: 50px;
-  background-color: red;
-}
-
 
 </style>
