@@ -42,8 +42,8 @@ export default {
     return {
 
       gameActive: false,
-      rightDrop: 0,
-      leftDrop: 1,
+      rightDrop: 1,
+      leftDrop: 2,
 
       options: [
         {

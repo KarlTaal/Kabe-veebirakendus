@@ -48,7 +48,12 @@ import annaAiKäik from "@/AI/targemAI";
 import kasLõpp from "@/scripts/kasMängLäbi";
 import LauaKontrollid from "@/components/LauaKontrollid";
 import annaKõikKäigud from "@/scripts/annaKõikKäigud";
+import miniMax from "@/AI/miniMax";
 
+
+
+//TODO Nupp ei muutu tavanupuks tagasi mõnikord!
+//TODO player of null, mingi error mängu jooksul!
 
 export default {
 
@@ -60,8 +65,8 @@ export default {
       valitudNupp: null,
       player1: "valge",
       aktiivneMängija: "valge",
-      player1Algo: 1,
-      player2Algo: 0,
+      player1Algo: 2,
+      player2Algo: 1,
       valgeVõite: 0,
       mustaVõite: 0,
 
@@ -82,7 +87,6 @@ export default {
     startGame() {
       this.algSeadistaLaud();
       this.gameActive = true;
-      this.aktiivneMängija = "valge";
       if (this.player1Algo === 3 && this.player2Algo === 3) {
         return;
       }
@@ -95,13 +99,13 @@ export default {
       this.valitudNupp = null;
       this.aktiivneMängija = "valge";
       this.player1 = "valge";
-      this.player1Algo = 1;
-      this.player2Algo = 0;
+      this.player1Algo = 2;
+      this.player2Algo = 1;
       this.gameActive = false;
     },
 
     algSeadistaLaud() {
-      const uusLaud = getInitialGameField();//ErinevadLauaSeisud().isGameOverSpecial;//
+      const uusLaud = getInitialGameField(); //ErinevadLauaSeisud().blackWillLoseMiddleAi//
       for (let i = 0; i < 8; i++) {
         for (let j = 0; j < 8; j++) {
           if (uusLaud[i][j]) //ehk ei ole null
@@ -194,26 +198,34 @@ export default {
     },
 
     async sooritaAiKäik(algo) {
+
       const kiirus = 100;
-      const winner = kasLõpp(this.gameField);
+      const winner = kasLõpp(this.aktiivneMängija, this.gameField);
 
       if (winner) {
-        if (winner === "must")
+        const winningPlayer = this.aktiivneMängija === "must" ? "valge" : "must";
+        if (winningPlayer === "must")
           this.mustaVõite++;
         else
           this.valgeVõite++;
-        console.log(`VÕITIS: ${winner}`)
+        console.log("VÕITIS: " + winningPlayer);
         this.algSeadistaLaud();
         this.sooritaAiKäik(this.player1Algo);
       }
 
       let käik;
-      if (algo === 0)
+      if (algo === 0) {
+        console.log(this.aktiivneMängija + " teen rumalat");
         käik = rumalAi(this.aktiivneMängija, this.gameField);
-      else if (algo === 1)
+      }
+      else if (algo === 1) {
+        console.log(this.aktiivneMängija + " teen keskmist");
         käik = annaAiKäik(this.aktiivneMängija, this.gameField, 4, [], this.aktiivneMängija).tee[0];
-      else if (algo === 2)
-        console.log("Minimax");
+      }
+      else if (algo === 2) {
+        console.log(this.aktiivneMängija + " teen minimaxi");
+        käik = miniMax(this.aktiivneMängija, this.gameField, 5, [], this.aktiivneMängija).tee[0];
+      }
       else
         return;
 
